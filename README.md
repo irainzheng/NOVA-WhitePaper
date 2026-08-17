@@ -25,8 +25,8 @@ NOVA 白皮书是 **数字文明的宪法级文档**。V1.7 标记 **GA 文档�
 
 ## 📚 文档结构
 
-- **64 模块** 中文 HTML + **完整英文版 HTML** + **25+ docs/** 工程文件
-- **V1.7.1**：全模块英文翻译、build_en_whitepaper.py、87 章节 sync_check
+- **64 模块** 中文 HTML + **完整英文版 HTML/Markdown** + **25+ docs/** 工程文件
+- **V1.7.1**：全模块英文翻译、Markdown 完整版（中/英）、87 章节 sync_check
 - **V1.7.0**：ASP RFC、扫描招标包、客户端 MVP 规范
 
 ---
@@ -35,9 +35,12 @@ NOVA 白皮书是 **数字文明的宪法级文档**。V1.7 标记 **GA 文档�
 
 | 资源 | 链接 |
 |------|------|
-| 中文白皮书 | [NOVA · 数字世界构思白皮书.html](./NOVA%20·%20数字世界构思白皮书.html) |
-| 完整英文版 | [docs/en/whitepaper.html](./docs/en/whitepaper.html) |
+| 中文白皮书 (HTML) | [NOVA · 数字世界构思白皮书.html](./NOVA%20·%20数字世界构思白皮书.html) |
+| **中文白皮书 (Markdown 完整版)** | [docs/zh/whitepaper.md](./docs/zh/whitepaper.md) |
+| 英文完整版 (HTML) | [docs/en/whitepaper.html](./docs/en/whitepaper.html) |
+| **英文完整版 (Markdown)** | [docs/en/whitepaper.md](./docs/en/whitepaper.md) |
 | 英文生成脚本 | [docs/ci/build_en_whitepaper.py](./docs/ci/build_en_whitepaper.py) |
+| Markdown 生成脚本 | [docs/ci/build_md_whitepaper.py](./docs/ci/build_md_whitepaper.py) |
 | 章节同步 CI | [docs/ci/sync_check.py](./docs/ci/sync_check.py) |
 | 扫描招标 | [docs/phase0-procurement/scan-rfp.md](./docs/phase0-procurement/scan-rfp.md) |
 | 客户端 MVP | [docs/phase0-client-mvp/](./docs/phase0-client-mvp/) |

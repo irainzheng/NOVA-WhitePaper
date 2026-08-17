@@ -6,8 +6,11 @@
 
 | 文件 | 章节 | 用途 |
 |------|------|------|
-| [en/whitepaper.html](./en/whitepaper.html) | 〇.八–〇.九 | **完整英文版**（87 章节 ID 同步） |
-| [ci/build_en_whitepaper.py](./ci/build_en_whitepaper.py) | 〇.九 | 中文→英文完整版生成 |
+| [zh/whitepaper.md](./zh/whitepaper.md) | 全文 | **中文 Markdown 完整版** |
+| [en/whitepaper.html](./en/whitepaper.html) | 〇.八–〇.九 | **完整英文版 HTML**（87 章节 ID 同步） |
+| [en/whitepaper.md](./en/whitepaper.md) | 〇.八–〇.九 | **英文 Markdown 完整版** |
+| [ci/build_en_whitepaper.py](./ci/build_en_whitepaper.py) | 〇.九 | 中文→英文 HTML 完整版生成 |
+| [ci/build_md_whitepaper.py](./ci/build_md_whitepaper.py) | 〇.九 | HTML→Markdown 完整版生成 |
 | [ci/chapter-manifest.yaml](./ci/chapter-manifest.yaml) | 〇.九 | 章节 ID 对照 |
 | [ci/check_links.py](./ci/check_links.py) | 〇.九 | 全站链接校验 |
 | [asp-foundation/](./asp-foundation/) | 19.9–19.10 | 基金会 · RFC |
@@ -21,7 +24,8 @@
 
 ```bash
 pip install pyyaml beautifulsoup4 deep-translator
-python docs/ci/build_en_whitepaper.py   # 章节变更后重建英文版
+python docs/ci/build_en_whitepaper.py   # 章节变更后重建英文 HTML
+python docs/ci/build_md_whitepaper.py   # 重建中/英 Markdown 完整版
 python docs/ci/sync_check.py
 python docs/ci/check_links.py
 ```

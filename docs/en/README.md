@@ -4,7 +4,9 @@
 
 | Document | Description |
 |----------|-------------|
-| [**whitepaper.html**](./whitepaper.html) | **Full English Edition** — all 64 modules, section-for-section with ZH |
+| [**whitepaper.html**](./whitepaper.html) | **Full English Edition (HTML)** — all 64 modules |
+| [**whitepaper.md**](./whitepaper.md) | **Full English Edition (Markdown)** — section-for-section with ZH |
+| [../zh/whitepaper.md](../zh/whitepaper.md) | Chinese full Markdown edition |
 | [executive-summary.md](./executive-summary.md) | Investor / partner overview |
 | [glossary.md](./glossary.md) | Core terminology |
 | [charter-ncc-1.0.md](./charter-ncc-1.0.md) | NCC-1.0 ten articles |

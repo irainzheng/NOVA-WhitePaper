@@ -539,7 +539,9 @@
     <table>
         <thead><tr><th>Document</th><th>Path</th><th>Scope</th></tr></thead>
         <tbody>
-            <tr><td><strong>Full English Edition</strong></td><td><code>docs/en/whitepaper.html</code></td><td>All 64 modules · section-for-section · V1.7.1</td></tr>
+            <tr><td><strong>Full English Edition (HTML)</strong></td><td><code>docs/en/whitepaper.html</code></td><td>All 64 modules · section-for-section · V1.7.1</td></tr>
+            <tr><td><strong>Full English Edition (Markdown)</strong></td><td><code>docs/en/whitepaper.md</code></td><td>Same content · GitHub-friendly · V1.7.1</td></tr>
+            <tr><td><strong>Chinese Full Edition (Markdown)</strong></td><td><code>docs/zh/whitepaper.md</code></td><td>From authoritative ZH HTML · V1.7.1</td></tr>
             <tr><td><strong>Executive Summary</strong></td><td><code>docs/en/executive-summary.md</code></td><td>Vision, MVC, Phase 0, economics, risks</td></tr>
             <tr><td><strong>Glossary</strong></td><td><code>docs/en/glossary.md</code></td><td>Core terms NPT/NVC/DES/ASP/COTMS</td></tr>
             <tr><td><strong>Charter (EN)</strong></td><td><code>docs/en/charter-ncc-1.0.md</code></td><td>NCC-1.0 ten articles</td></tr>
@@ -2871,8 +2873,10 @@ AI自动初审（60-70%，秒级-分钟级）
         <tbody>
             <tr><td><code>docs/README.md</code></td><td>工程文件总索引</td></tr>
             <tr><td><code>docs/index.html</code></td><td>工程 docs 浏览器入口（HTML 可点击索引）</td></tr>
+            <tr><td><code>docs/zh/whitepaper.md</code></td><td>中文 Markdown 完整版</td></tr>
+            <tr><td><code>docs/en/whitepaper.md</code></td><td>英文 Markdown 完整版</td></tr>
             <tr><td><code>docs/en/whitepaper.html</code></td><td>完整英文版 HTML（87 章节 ID 同步）</td></tr>
-            <tr><td><code>docs/ci/build_en_whitepaper.py</code></td><td>中文→英文完整版生成脚本</td></tr>
+            <tr><td><code>docs/ci/build_md_whitepaper.py</code></td><td>HTML→Markdown 完整版生成</td></tr>
             <tr><td><code>docs/ci/chapter-manifest.yaml</code></td><td>中英章节对照 · sync_check 输入</td></tr>
             <tr><td><code>docs/ci/sync_check.py</code></td><td>PR 章节同步校验脚本</td></tr>
             <tr><td><code>docs/ci/check_links.py</code></td><td>全站 HTML/Markdown 链接校验</td></tr>
