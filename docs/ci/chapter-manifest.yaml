@@ -1,0 +1,100 @@
+# NOVA whitepaper chapter sync manifest
+# Whitepaper V1.7.1 · SYNC-01 / SYNC-02 / full section parity
+version: "1.7.1"
+
+zh_source: "../../NOVA · 数字世界构思白皮书.html"
+en_edition: "../en/whitepaper.html"
+# legacy alias
+en_mirror: "../en/whitepaper.html"
+
+chapters:
+  - id: sec-0
+    title_en: "0. Constitutional Positioning"
+    required: true
+  - id: sec-charter
+    title_en: "0.7 Civilization Charter"
+    required: true
+  - id: sec-en
+    title_en: "0.8 English Edition Notice"
+    required: true
+  - id: sec-en-html
+    title_en: "0.9 Bilingual Sync & CI"
+    required: true
+  - id: sec-1
+    title_en: "1. Vision & Architecture"
+    required: true
+  - id: sec-2
+    title_en: "2. Resource Priority Constitution"
+    required: true
+  - id: sec-4
+    title_en: "4. Digital Existence System"
+    required: true
+  - id: sec-7
+    title_en: "7. Crowdsourced Replication"
+    required: true
+  - id: sec-7-7
+    title_en: "7.7 CS-CHAIN"
+    required: true
+  - id: sec-9-6
+    title_en: "9.6 Data Source SLA"
+    required: true
+  - id: sec-19-7
+    title_en: "19.7 ASP API Outline"
+    required: true
+  - id: sec-19-8
+    title_en: "19.8 Conformance Tests"
+    required: true
+  - id: sec-19-9
+    title_en: "19.9 ASP Foundation"
+    required: true
+  - id: sec-19-10
+    title_en: "19.10 ASP RFC Process"
+    required: true
+  - id: sec-21
+    title_en: "21. Dual-Rail Economy"
+    required: true
+  - id: sec-21-9
+    title_en: "21.9 Monte Carlo Stress Test"
+    required: true
+  - id: sec-22
+    title_en: "22. NVC Blockchain System"
+    required: true
+  - id: sec-22-7
+    title_en: "22.7 Zone C Dashboard API"
+    required: true
+  - id: sec-29-8
+    title_en: "29.8 Heritage MOU Template"
+    required: true
+  - id: sec-32
+    title_en: "32. Platform Governance"
+    required: true
+  - id: sec-38-8
+    title_en: "38.8 Capability Unlock Roadmap"
+    required: true
+  - id: sec-40
+    title_en: "40. Engineering Blueprint"
+    required: true
+  - id: sec-40-7
+    title_en: "40.7 Demo Environment"
+    required: true
+  - id: sec-40-8
+    title_en: "40.8 City Selection Vote"
+    required: true
+  - id: sec-40-9
+    title_en: "40.9 Scan RFP Package"
+    required: true
+  - id: sec-40-10
+    title_en: "40.10 Open Client MVP"
+    required: true
+  - id: sec-review
+    title_en: "Appendix Review Memo"
+    required: true
+  - id: sec-docs
+    title_en: "Appendix docs Index"
+    required: true
+  - id: sec-phase0
+    title_en: "Appendix Phase 0 Checklist"
+    required: true
+  - id: sec-final
+    title_en: "Final Closing"
+    required: true

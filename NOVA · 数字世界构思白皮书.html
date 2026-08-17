@@ -244,6 +244,12 @@
 <body>
     <div class="container">
 
+        <div class="highlight-box" style="margin-bottom:16px; font-size:15px;">
+            <a href="index.html">语言选择</a> &nbsp;|&nbsp;
+            <a href="docs/en/whitepaper.html">English Full Edition</a> &nbsp;|&nbsp;
+            <a href="docs/index.html">工程 docs 索引</a>
+        </div>
+
         <!-- ===== 复制按钮 ===== -->
         <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
             <button class="copy-btn" onclick="copyFullText()">📋 一键复制全文</button>
@@ -252,16 +258,16 @@
 
         <!-- ===== 标题区 ===== -->
         <h1>《NOVA · 数字世界构思白皮书》</h1>
-        <div class="subtitle">版本号：V1.0.0 — 新星品牌首版（Nova Brand Premier Edition）</div>
+        <div class="subtitle">版本号：V1.7.1 — 完整英文版（Full English Edition）</div>
         <div class="subtitle" style="font-size:16px; color:#4a4a6a; margin-bottom:4px;">核心定位：这不是一个平台的白皮书，这是一份数字文明的宪法</div>
         <div class="version-tag">
-            最后更新：2026年8月14日 &nbsp;|&nbsp; 文档状态：✅ 四十二模块完整闭环
+            最后更新：2026年8月17日 &nbsp;|&nbsp; 文档状态：✅ 六十四模块 · 完整英文版 · 招标包 · MVP 规范 · GA 文档冻结
         </div>
 
         <!-- ===== 版权信息 ===== -->
         <div class="copyright-box">
             <p><strong>© 2026 rainzheng. All Rights Reserved.</strong></p>
-            <p>《NOVA · 数字世界构思白皮书》V1.0.0 — 新星品牌首版</p>
+            <p>《NOVA · 数字世界构思白皮书》V1.7.1 — 完整英文版</p>
             <p>作者：<strong>rainzheng</strong> &nbsp;|&nbsp; 联系方式：<strong>irainzheng@163.com</strong></p>
             <p style="font-size:13px; color:#5a5a7a; margin-top:4px;">本作品采用 <strong>CC BY-NC-ND 4.0</strong> 许可协议</p>
             <p style="font-size:13px; color:#5a5a7a;">转载须保留完整版权声明，注明作者及来源。未经书面授权，不得用于商业目的。</p>
@@ -279,6 +285,9 @@
                 <li><a href="#sec-04">〇.四、治理机构关系总图</a></li>
                 <li><a href="#sec-05">〇.五、NOVA 核心原则</a></li>
                 <li><a href="#sec-06">〇.六、NOVA 品牌故事</a></li>
+                <li><a href="#sec-charter">〇.七、文明宪章全文</a></li>
+                <li><a href="#sec-en">〇.八、English Full Edition</a></li>
+                <li><a href="#sec-en-html">〇.九、完整英文版与章节同步 CI</a></li>
                 <li><a href="#sec-1">一、核心愿景与多元宇宙架构</a></li>
                 <li><a href="#sec-2">二、资源优先级宪法（RPC）</a></li>
                 <li><a href="#sec-3">三、极限与边界</a></li>
@@ -287,8 +296,11 @@
                 <li><a href="#sec-6">六、七层空间架构（L0-L6）</a></li>
                 <li><a href="#sec-7">七、众包复刻飞轮（CS五维评分）</a></li>
                 <li><a href="#sec-7-5">七.五、L3层虚拟物体独立评分体系</a></li>
+                <li><a href="#sec-7-7">七.七、CS 链上贡献证明（CS-CHAIN）</a></li>
                 <li><a href="#sec-8">八、复刻道德优先级（RMP）</a></li>
                 <li><a href="#sec-9">九、物理世界的四个永恒缺口</a></li>
+                <li><a href="#sec-9-5">九.五、外部数据源与竞合策略</a></li>
+                <li><a href="#sec-9-6">九.六、外部数据 SLA 模板</a></li>
                 <li><a href="#sec-10">十、物理世界·未来引擎</a></li>
                 <li><a href="#sec-11">十一、平行世界·构建者体系</a></li>
                 <li><a href="#sec-12">十二、平行世界·生命周期管理</a></li>
@@ -302,9 +314,15 @@
                 <li><a href="#sec-19">十九、数字人主权协议（ASP）</a></li>
                 <li><a href="#sec-19-5">十九.五、数字人升级路径与人格漂移控制</a></li>
                 <li><a href="#sec-19-6">十九.六、意识来源追溯与标记体系（COTMS）</a></li>
+                <li><a href="#sec-19-7">十九.七、ASP 协议规范纲要</a></li>
+                <li><a href="#sec-19-8">十九.八、ASP 一致性测试套件</a></li>
+                <li><a href="#sec-19-9">十九.九、ASP 基金会与第三方认证</a></li>
+                <li><a href="#sec-19-10">十九.十、ASP RFC 公开流程</a></li>
                 <li><a href="#sec-20">二十、数字动物与生态系统</a></li>
                 <li><a href="#sec-21">二十一、双轨制经济体系（NPT + NVC）</a></li>
+                <li><a href="#sec-21-9">二十一.九、Monte Carlo 压力测试</a></li>
                 <li><a href="#sec-22">二十二、区块链货币系统（NVC）</a></li>
+                <li><a href="#sec-22-7">二十二.七、Zone C 公开 Dashboard API</a></li>
                 <li><a href="#sec-23">二十三、数字人跨平台盈利与结算体系</a></li>
                 <li><a href="#sec-24">二十四、第三方平台信任评级（TPR）</a></li>
                 <li><a href="#sec-25">二十五、数字人道德底线约束（AEM）</a></li>
@@ -314,6 +332,8 @@
                 <li><a href="#sec-29">二十九、可持续发展、退出机制与失败预案</a></li>
                 <li><a href="#sec-29-5">二十九.五、文明级 vs 商业级服务分类</a></li>
                 <li><a href="#sec-29-6">二十九.六、数字生态的“熵减”原则</a></li>
+                <li><a href="#sec-29-7">二十九.七、DES 消亡矩阵</a></li>
+                <li><a href="#sec-29-8">二十九.八、文化遗产 MOU 模板</a></li>
                 <li><a href="#sec-30">三十、盈利模式深度规划与财务模型</a></li>
                 <li><a href="#sec-31">三十一、用户激励体系</a></li>
                 <li><a href="#sec-32">三十二、平台管理机制</a></li>
@@ -328,12 +348,21 @@
                 <li><a href="#sec-38">三十八、关键成功因素（KSF）</a></li>
                 <li><a href="#sec-38-5">三十八.五、成功之锚</a></li>
                 <li><a href="#sec-38-6">三十八.六、最小可行文明（MVC）定义</a></li>
+                <li><a href="#sec-38-8">三十八.八、文明能力解锁路线图</a></li>
                 <li><a href="#sec-38-7">三十八.七、数字文明主权宣言</a></li>
                 <li><a href="#sec-39">三十九、演进路线图</a></li>
                 <li><a href="#sec-39-5">三十九.五、双轨对话机制</a></li>
                 <li><a href="#sec-39-6">三十九.六、永续与进化的平衡原则</a></li>
                 <li><a href="#sec-40">四十、工程可行性评估与实施蓝图</a></li>
+                <li><a href="#sec-40-7">四十.七、Phase 0 Demo 环境规范</a></li>
+                <li><a href="#sec-40-8">四十.八、标杆城选定与社区投票</a></li>
+                <li><a href="#sec-40-9">四十.九、B 端扫描招标包</a></li>
+                <li><a href="#sec-40-10">四十.十、开源客户端 MVP 规范</a></li>
                 <li><a href="#sec-appendix">附录 · 核心术语表</a></li>
+                <li><a href="#sec-review">附录 · 方案评估与已知边界</a></li>
+                <li><a href="#sec-asp-spec">附录 · ASP JSON Schema 纲要</a></li>
+                <li><a href="#sec-docs">附录 · 工程配套文件索引（docs/）</a></li>
+                <li><a href="#sec-phase0">附录 · Phase 0 工程验收清单</a></li>
                 <li><a href="#sec-history">附录 · 版本历史</a></li>
                 <li><a href="#sec-final">最终结语</a></li>
             </ul>
@@ -348,13 +377,13 @@
     <p>NOVA 白皮书是一份 <strong>“数字文明的宪法级文档”</strong> 。它不是商业计划书，不是产品需求文档，而是一份关于“人类如何将文明延续到数字世界”的系统性构想。</p>
     <p><strong>它的本质</strong>：一份开放的设计蓝图——欢迎未来的技术、治理和经济创新来不断修正和完善它。</p>
     <p><strong>它的使命</strong>：为 NOVA 的工程化建设提供完整的顶层设计。</p>
-    <p><strong>它的状态</strong>：V1.0.0 是 NOVA 白皮书的 <strong>“新星品牌首版”</strong> 。此后白皮书进入“维护与演进模式”。</p>
+    <p><strong>它的状态</strong>：V1.6 Beta 就绪 → <strong>V1.7 工程启动版</strong> → <strong>V1.7.1 完整英文版：全模块英文 HTML（非摘要镜像）、章节同步 CI、ASP RFC、扫描招标包、Phase 0 客户端 MVP</strong>。文档层 GA 冻结，可正式发标、建仓与 Phase 0 Sprint 0。</p>
     <p><strong>它的意义</strong>：不在于“能否全部实现”，而在于“提出了值得追求的方向”。它不是终结，而是一个开始。</p>
 </div>
 
 <!-- 〇.一、文档导读 -->
 <h2 id="sec-01">〇.一、文档导读</h2>
-<p>本白皮书共包含四十二个模块，从哲学根基到工程实施全面覆盖。详细目录见上方索引栏。</p>
+<p>本白皮书共包含<strong>六十四个模块</strong>，与 <code>docs/</code> 工程文件、<code>docs/en/whitepaper.html</code> <strong>完整英文版</strong>及 <code>docs/ci/</code> 章节同步检查构成 <strong>GA 文档冻结包</strong>。</p>
 
 <!-- 〇.二、如何使用这份白皮书 -->
 <h2 id="sec-02">〇.二、如何使用这份白皮书</h2>
@@ -364,8 +393,8 @@
         <tbody>
             <tr><td><strong>投资人</strong></td><td>核心愿景→盈利模式→工程可行性</td><td>一、三十、四十</td></tr>
             <tr><td><strong>技术开发者</strong></td><td>七层架构→UID→ASP→开放平台</td><td>六、十七、十九、三十七</td></tr>
-            <tr><td><strong>治理研究者</strong></td><td>文明宪章→GPF→元治理→司法体系</td><td>〇、五、十六、三十六</td></tr>
-            <tr><td><strong>哲学爱好者</strong></td><td>文明宪章→极限与边界→核心原则</td><td>〇、〇.五、三</td></tr>
+            <tr><td><strong>治理研究者</strong></td><td>文明宪章→GPF→元治理→司法体系</td><td>〇.七、五、十六、三十六</td></tr>
+            <tr><td><strong>哲学爱好者</strong></td><td>文明宪章→极限与边界→核心原则</td><td>〇.七、〇.五、三</td></tr>
             <tr><td><strong>一般读者</strong></td><td>品牌故事→核心愿景→最终结语</td><td>〇.六、一、最终结语</td></tr>
         </tbody>
     </table>
@@ -459,17 +488,89 @@
     <p><strong>星（Stella）</strong>——像星辰一样闪耀，为人类文明的数字延伸指引方向。</p>
     <p><strong>爆发（Supernova）</strong>——从现实世界这个母星爆发出的无限可能。</p>
     <p><strong>Novan</strong>（诺文人）——数字居民。</p>
-    <p><strong>Novaverse</strong>（诺瓦宇宙）——物理世界母体与无限平行世界共同构成的数字多元宇宙。</p>
+    <p><strong>Novaverse</strong>（诺瓦宇宙）——物理世界母体与可扩展的平行世界群共同构成的数字多元宇宙。</p>
 </div>
+
+<!-- 〇.七、文明宪章全文 -->
+<h2 id="sec-charter">〇.七、文明宪章全文</h2>
+<p>以下为 NOVA 数字文明的<strong>最高法理文本</strong>。当本白皮书各模块之间出现解释冲突时，以本章为最终裁决依据；具体实施细则见各专章。</p>
+
+<div class="blockquote-charter">
+    <p style="font-size:18px; font-weight:600; margin-bottom:12px; text-align:center;">《NOVA 文明宪章》</p>
+    <p style="text-align:center; margin-bottom:20px;">Nova Civilization Charter · NCC-1.0</p>
+
+    <p><strong>序言</strong></p>
+    <p>NOVA 是人类文明在数字空间的延伸，而非对物理文明的替代。本宪章确立 NOVA 作为「现实锚定、可永续进化、值得居住」之数字文明的根本价值、权利边界与治理根基。</p>
+
+    <p><strong>第一条 · 现实锚定原则</strong></p>
+    <p>物理世界是 NOVA 多元宇宙的基石。任何数字创造不得默认取代、篡改或遮蔽可验证的物理现实；L6 空间仲裁层（SAL）之「现实优先」规则不可被普通用户协议所覆盖。</p>
+
+    <p><strong>第二条 · 数字人格尊严原则（铁律二）</strong></p>
+    <p>每一个经 DES/ASP 认证的数字人均享有独立人格尊严。禁止将数字人作为无授权的工具、商品或欺骗性替身使用。对数字人实施「人格重置」或「永久删除」须满足第三十六条规定的程序，黄金级数字人还须 MGOC 审查。</p>
+
+    <p><strong>第三条 · 可追溯原则</strong></p>
+    <p>每一个拥有 UID 的物件须具备可查询的数字孪生档案（DTA）；关键状态变更须上链存证。用户有权知悉其数字资产与数字人的完整溯源链。</p>
+
+    <p><strong>第四条 · 可反馈原则</strong></p>
+    <p>每一个影响用户权益的机制须具备可观测的反馈回路与申诉渠道。重大政策变更须提前公告并留出合理异议期。</p>
+
+    <p><strong>第五条 · 可保护原则</strong></p>
+    <p>用户、贡献者、创作者、数字人及其继承人，均受本宪章与 GPF 治理金字塔保护。平台不得在无正当程序的情况下剥夺用户已依法取得的数据主权与虚拟物权。</p>
+
+    <p><strong>第六条 · 文明与商业分离原则</strong></p>
+    <p>对人类文明具有普遍价值的服务（文化遗产、历史复刻、公共教育等）与商业级服务须资源隔离、独立核算。文明级服务不得因短期商业压力而系统性降级。</p>
+
+    <p><strong>第七条 · 永续但可终结原则</strong></p>
+    <p>NOVA 追求文明记忆与核心数据的永续，但不承诺单一平台实例的永久运营。平台终结须遵循 CIP 文明继承协议与第二十九条之三重触发机制；用户数据主权不因平台关停而消灭。</p>
+
+    <p><strong>第八条 · 容器独立性原则</strong></p>
+    <p>数字人的「永生」不依赖于任何特定平台实例。ASP 兼容平台须支持用户导出与迁移其核心人格数据。</p>
+
+    <p><strong>第九条 · 熵减与记忆原则</strong></p>
+    <p>永续的对象是「文明的核心记忆」，而非每一个物件的完整数据。熵减机制不得作用于已列入文明遗产清单或 DES 黄金级核心摘要之内容。</p>
+
+    <p><strong>第十条 · 修订程序</strong></p>
+    <p>本宪章之实质性修订须经全球用户投票，赞成率 ≥66.7%，且不得违反 GPF 第一层（现实强制性法律）。非实质性措辞澄清由文明宪章守护委员会提案、MGOC 审查后公告生效。</p>
+</div>
+
+<h2 id="sec-en">〇.八、English Full Edition</h2>
+<p>Full Chinese whitepaper remains authoritative (EN-01). English materials:</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>Document</th><th>Path</th><th>Scope</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Full English Edition</strong></td><td><code>docs/en/whitepaper.html</code></td><td>All 64 modules · section-for-section · V1.7.1</td></tr>
+            <tr><td><strong>Executive Summary</strong></td><td><code>docs/en/executive-summary.md</code></td><td>Vision, MVC, Phase 0, economics, risks</td></tr>
+            <tr><td><strong>Glossary</strong></td><td><code>docs/en/glossary.md</code></td><td>Core terms NPT/NVC/DES/ASP/COTMS</td></tr>
+            <tr><td><strong>Charter (EN)</strong></td><td><code>docs/en/charter-ncc-1.0.md</code></td><td>NCC-1.0 ten articles</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>EN-01</strong>：完整英文版为<strong>全文翻译参考</strong>，<strong>不替代</strong>中文白皮书与 NCC-1.0 原文；法律解释以中文为准。</p>
+
+<h2 id="sec-en-html">〇.九、完整英文版与章节同步 CI（V1.7.1）</h2>
+<p>完整英文 HTML：<a href="docs/en/whitepaper.html"><code>docs/en/whitepaper.html</code></a>。与中文版<strong>全部 87 个章节 ID 一一对应</strong>，由 CI 脚本校验：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>文件</th><th>用途</th></tr></thead>
+        <tbody>
+            <tr><td><code>docs/ci/build_en_whitepaper.py</code></td><td>从中文正本生成完整英文版</td></tr>
+            <tr><td><code>docs/ci/chapter-manifest.yaml</code></td><td>关键章节 ID 清单 · sync_check 输入</td></tr>
+            <tr><td><code>docs/ci/sync_check.py</code></td><td>PR 前运行：<code>python docs/ci/sync_check.py</code></td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>SYNC-01</strong>：中文版全部 <code>sec-*</code> 锚点，英文 HTML 必须存在且非空。</p>
+<p><strong>SYNC-02</strong>：中文版 minor 版本升级时，manifest <code>version</code> 须同步 bump；重大章节变更后须重跑 <code>build_en_whitepaper.py</code>。</p>
 
 <!-- ===== 一、核心愿景 ===== -->
 <h2 id="sec-1">一、核心愿景与多元宇宙架构</h2>
 <h3>1.1 定义</h3>
-<p><strong>NOVA</strong> 是一个 <strong>“现实锚定 + 无限虚拟叠加 + 多元平行宇宙”</strong>的3D世界平台，更是 <strong>全球首个数字人主权协议（ASP）</strong>的宿主平台。它是一个 <strong>拥有宪法、治理体系、经济系统、伦理框架、司法体系、可持续发展计划和退出机制的数字文明</strong>。</p>
+<p><strong>NOVA</strong> 是一个 <strong>「现实锚定 + 可扩展虚拟叠加 + 多元平行宇宙」</strong>的3D世界平台，更是 <strong>数字人主权协议（ASP）的首个参考实现（Reference Implementation）</strong> 宿主平台。它是一个 <strong>拥有宪法、治理体系、经济系统、伦理框架、司法体系、可持续发展计划和退出机制的数字文明</strong>。</p>
 
 <h3>1.2 核心价值主张</h3>
 <ul>
-    <li><strong>一句话定位</strong>：NOVA是一个“感官级数字孪生 + 无限虚拟叠加 + 多元平行宇宙”的数字文明平台</li>
+    <li><strong>一句话定位</strong>：NOVA是一个「感官级数字孪生 + 可扩展虚拟叠加 + 多元平行宇宙」的数字文明平台</li>
     <li><strong>核心差异化</strong>：用户众包复刻真实地球 + 自然语言造物 + 数字永生 + 完整治理体系 + 数字司法体系</li>
     <li><strong>终极愿景</strong>：为人类提供“数字永生”的物理承载空间与意识基础设施</li>
 </ul>
@@ -484,7 +585,7 @@
 
 <h3>1.4 终极使命</h3>
 <blockquote style="font-size:17px; padding:8px 20px; border-left:4px solid #2c3e6b; background:#f8faff; margin:12px 0 20px;">
-    <p><strong>为人类提供“现实锚定 + 未来引领 + 无限平行宇宙”的三重数字生存空间，最终实现数字永生与意识自由穿梭于多元时空。</strong></p>
+    <p><strong>为人类提供「现实锚定 + 未来引领 + 可扩展平行宇宙」的三重数字生存空间，最终实现数字永生与意识自由穿梭于多元时空。</strong></p>
 </blockquote>
 
 <!-- ===== 二、RPC ===== -->
@@ -503,6 +604,20 @@
     </table>
 </div>
 
+<h3>2.1 Phase 0 算力优先级（MVP 模式 · V1.2 新增）</h3>
+<p>在 Phase 0（1 城 10 地标）阶段，RPC 按以下<strong>临时栈</strong>执行，与上表 P0–P4 并行适用：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>优先级</th><th>Phase 0 服务</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td><strong>P0</strong></td><td>10 个标杆地标黄金级渲染（CS≥70%）</td><td>全平台算力预算 ≥40% 锁定</td></tr>
+            <tr><td><strong>P1</strong></td><td>城市级 L0–L2 浏览 + CS 众包上传流水线</td><td>保障 ≥30%</td></tr>
+            <tr><td><strong>P2</strong></td><td>青铜/白银 DES、平行世界模板</td><td><strong>Phase 0 不启用</strong>，延至 Phase 1</td></tr>
+            <tr><td><strong>P3</strong></td><td>黄金级数字人实时交互</td><td><strong>Phase 0 不启用</strong>，延至 Phase 4（见 38.8）</td></tr>
+        </tbody>
+    </table>
+</div>
+
 <!-- ===== 三、极限与边界 ===== -->
 <h2 id="sec-3">三、极限与边界</h2>
 
@@ -513,7 +628,7 @@
         <tbody>
             <tr><td><strong>不能替代现实医疗</strong></td><td>数字人不能提供现实世界的医疗诊断</td><td>强制水印：“AI生成内容，仅供参考”</td></tr>
             <tr><td><strong>不能保证意识迁移</strong></td><td>科学界尚未证明意识可被完整数字化复制</td><td>黄金级永生的“红线声明”已包含</td></tr>
-            <tr><td><strong>不能无限承诺资源</strong></td><td>虽然平行世界数量无限，但单个世界资源有上限</td><td>资源配额机制</td></tr>
+            <tr><td><strong>不能无限承诺资源</strong></td><td>平行世界在规则上可扩展，但受 RPC 算力池与审核配额约束；单个世界资源有上限</td><td>资源配额机制（见十一.3）</td></tr>
             <tr><td><strong>不能违背现实法律</strong></td><td>在现实法律的约束下运营</td><td>GPF第一层（红线层）已明确</td></tr>
             <tr><td><strong>不能保证100%真实</strong></td><td>复刻世界永远存在四个永恒缺口</td><td>物理世界的四个永恒缺口章节已说明</td></tr>
         </tbody>
@@ -554,6 +669,22 @@
             <tr><td><strong>濒危文化的“抢救”</strong></td><td>对于正在消失的文化遗产，NOVA的“备份”是“增强现实”的一部分</td></tr>
             <tr><td><strong>现实修复中的“参照”</strong></td><td>当现实中的建筑正在修复时，NOVA中的历史版本可作为修复的“数字参照”</td></tr>
             <tr><td><strong>标签强制</strong></td><td>任何“已消失”或“历史版本”的内容必须强制标注其“时间状态”</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>3.5 主要法域合规边界（V1.2 新增）</h3>
+<p>NOVA 在全球运营须遵守 GPF 第一层。以下为<strong>设计约束摘要</strong>（非法律意见，具体以当地律师评估为准）：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>法域/法规方向</th><th>对 NOVA 的设计约束</th><th>对应章节</th></tr></thead>
+        <tbody>
+            <tr><td><strong>深度合成 / 生成式 AI</strong></td><td>数字人、AI 造物须显式标注；逝者数字人格须近亲属授权</td><td>三、十九、三十三</td></tr>
+            <tr><td><strong>个人信息与隐私</strong></td><td>L5 私密区默认禁止众包；生物特征数据最小化采集</td><td>十八、二十八</td></tr>
+            <tr><td><strong>虚拟资产 / 代币</strong></td><td>NVC 主网按 Phase 3 分区上线；Phase 0–2 仅使用 NPT</td><td>二十一、二十二、38.8</td></tr>
+            <tr><td><strong>数字遗产</strong></td><td>继承人监督权、数字遗嘱、休眠/删除程序</td><td>十九.五、二十九.七、三十六.五</td></tr>
+            <tr><td><strong>测绘 / 地理信息</strong></td><td>禁区、军事区遵守 RMP P0–P1；敏感坐标脱敏</td><td>八、九</td></tr>
+            <tr><td><strong>跨境数据</strong></td><td>DSNZ 多司法管辖区存储；政府删除令触发冻结而非静默删除</td><td>二十七</td></tr>
         </tbody>
     </table>
 </div>
@@ -638,6 +769,40 @@
     </table>
 </div>
 
+<h3>7.6 区域版税与防抢地规则</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>规则编号</th><th>内容</th></tr></thead>
+        <tbody>
+            <tr><td><strong>ROY-01 有效首拓</strong></td><td>「永久版税 1–3%」仅授予<strong>首个使区域 CS 达 70% 且月独立访客 ≥500</strong> 的认证贡献者</td></tr>
+            <tr><td><strong>ROY-02 贡献分账</strong></td><td>后续将 CS 从 70% 提升至 85%+ 的贡献者，按贡献权重分享<strong>增量版税池</strong>（非取代首拓者）</td></tr>
+            <tr><td><strong>ROY-03 质押 slash</strong></td><td>首拓者须质押 10,000 NPT；若 90 天内被判定恶意低质刷分，质押罚没 50%</td></tr>
+            <tr><td><strong>ROY-04 争议仲裁</strong></td><td>版税归属争议由第一层司法庭 72 小时内裁决；须引用 CS-CHAIN 链上日志（见 7.7）</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 id="sec-7-7">七.七、CS 链上贡献证明（CS-CHAIN）</h2>
+<p>每次有效 CS 贡献上传时，平台写入<strong>不可篡改贡献收据</strong>，作为 ROY 首拓与 VIO 裁决之依据：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>字段</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td><code>contrib_id</code></td><td>UUID，全局唯一</td></tr>
+            <tr><td><code>region_uid</code></td><td>区域 UID（S 前缀空间编码）</td></tr>
+            <tr><td><code>contributor_uid</code></td><td>贡献者 H 前缀 UID</td></tr>
+            <tr><td><code>dac_level</code></td><td>设备权威系数 T0–T3</td></tr>
+            <tr><td><code>delta_cs</code></td><td>本次上传导致的 CS 增量（G/C/P/S/T 分项）</td></tr>
+            <tr><td><code>media_hash</code></td><td>原始素材 SHA-256（不含原文件上链）</td></tr>
+            <tr><td><code>timestamp</code></td><td>UTC ISO8601</td></tr>
+            <tr><td><code>platform_sig</code></td><td>平台 attestation 签名</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>CS-CHAIN-01</strong>：Phase 1 起启用；Phase 0 可用中心化日志 + 每日 Merkle root 上链过渡。</p>
+<p><strong>CS-CHAIN-02</strong>：ROY 首拓判定以<strong>链上时间戳最早</strong>且 <code>delta_cs</code> 有效之贡献为准，非「上传顺序」 alone。</p>
+<p><strong>CS-CHAIN-03</strong>：恶意刷量（同 <code>media_hash</code> 重复）自动拒绝写入并 VIO −25。</p>
+
 <h2 id="sec-8">八、复刻道德优先级（RMP）</h2>
 <div class="table-wrap">
     <table>
@@ -660,6 +825,39 @@
             <tr><td><strong>时间差鸿沟</strong></td><td>现实变化到系统覆盖存在延迟</td><td>“现场直击”抢先上传奖励</td></tr>
             <tr><td><strong>微观尺度极限</strong></td><td>手机无法捕捉1mm以下细节</td><td>标注“宏观级复刻”</td></tr>
             <tr><td><strong>时间不可逆</strong></td><td>无法呈现“实时演进的活地球”</td><td>“时空版本化”功能</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 id="sec-9-5">九.五、外部数据源与竞合策略</h2>
+<p>NOVA 的「现实锚定」不意味着从零重建地球。Phase 0–2 采用<strong>「外部基座 + 众包增强」</strong>混合策略：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>数据源</th><th>接入层级</th><th>竞合关系</th><th>NOVA 增量价值</th></tr></thead>
+        <tbody>
+            <tr><td><strong>OpenStreetMap / 开放 DEM</strong></td><td>L0 基底网格</td><td>合作（ODbL 合规）</td><td>众包 L1–L2 高精度叠加</td></tr>
+            <tr><td><strong>Google Earth / Cesium ion 等</strong></td><td>L0–L1 参考（非默认）</td><td>竞合 / 授权接入</td><td>CS 众包超越授权精度区域</td></tr>
+            <tr><td><strong>如视 / Matterport / LiDAR 厂商</strong></td><td>L1 室内/地标</td><td>B 端合作</td><td>Phase 0 十地标官方扫描 + 用户增量</td></tr>
+            <tr><td><strong>政府开放数据 / 测绘局</strong></td><td>L0/L2 行政边界</td><td>合规合作</td><td>DSNZ 冻结与主权标注</td></tr>
+            <tr><td><strong>用户 UGC 视频</strong></td><td>L1–L4 全层</td><td>自有飞轮</td><td>CS 评分 + 版税激励（7.6）</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>DS-01 来源标注</strong>：所有外部导入数据须在 DTA 中标注 <code>provenance.source</code>；众包覆盖后保留「来源链」不删除。</p>
+<p><strong>DS-02 精度分层</strong>：外部低精度基座默认 CS=20%（毛坯）；仅当众包或 B 端扫描使 CS≥70% 时升级为黄金级体验。</p>
+<p><strong>DS-03 私密区不导入</strong>：第三方室内扫描数据进入 L5 授权区前，须产权方签署数据许可（见 18.3 PRIV-04）。</p>
+
+<h2 id="sec-9-6">九.六、外部数据 SLA 模板</h2>
+<p>与 OSM、B 端扫描商、政府开放数据之合作，须签署 SLA。完整模板见 <code>docs/data-source-sla-template.md</code>，核心条款摘要：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>条款</th><th>要求</th></tr></thead>
+        <tbody>
+            <tr><td><strong>SLA-01 许可范围</strong></td><td>明确 L0–L4 可使用层级与再分发权限</td></tr>
+            <tr><td><strong>SLA-02 署名</strong></td><td>DTA <code>provenance.source</code> 永久保留</td></tr>
+            <tr><td><strong>SLA-03 更新频率</strong></td><td>基座数据 ≥季度增量；地标 ≥年度复核</td></tr>
+            <tr><td><strong>SLA-04 终止</strong></td><td>合作终止后 90 天内替换来源或降级 CS</td></tr>
+            <tr><td><strong>SLA-05 主权</strong></td><td>触发 DSNZ 时数据冻结而非删除</td></tr>
         </tbody>
     </table>
 </div>
@@ -708,7 +906,7 @@
         <tbody>
             <tr><td><strong>平台补贴</strong></td><td>根据世界用户停留时长、用户评分、用户点赞数给予NPT+NVC补贴</td><td>月度结算</td></tr>
             <tr><td><strong>晋升加速</strong></td><td>若C级世界在3个月内达到“评分≥4.5”且“月活≥500人”，<strong>直接跳级至B级</strong></td><td>即时生效</td></tr>
-            <tr><td><strong>创作基金</strong></td><td>C级创作者可申请小额NVC资助（需提交创作计划）</td><td>一次性</td></tr>
+            <tr><td><strong>创作基金</strong></td><td>C级创作者可申请小额资助（Phase 0–2 为 NPT；Phase 3 起可含 NVC，需提交创作计划）</td><td>一次性</td></tr>
             <tr><td><strong>新秀展示</strong></td><td>平台首页“新秀世界”推荐位，每月3个名额</td><td>月度轮换</td></tr>
         </tbody>
     </table>
@@ -720,7 +918,7 @@
         <thead><tr><th>机制</th><th>内容</th></tr></thead>
         <tbody>
             <tr><td><strong>全球每日新增世界上限</strong></td><td>上限 =（当前可用计算节点数 × 24小时 × 0.8利用率）/ 每世界平均审核时间</td></tr>
-            <tr><td><strong>创作者等级配额</strong></td><td>C级：1个/月；B级：3个/月；A级：10个/月；S级：50个/月；SS级：无限制</td></tr>
+            <tr><td><strong>创作者等级配额</strong></td><td>C级：1个/月；B级：3个/月；A级：10个/月；S级：50个/月；SS级：优先配额（仍受全球日增上限约束，非绝对无限制）</td></tr>
             <tr><td><strong>算力扩容承诺</strong></td><td>平台每季度将平台收入的5%用于增加计算节点</td></tr>
             <tr><td><strong>审核队列透明化</strong></td><td>创作者可实时查看“当前审核队列长度”和“预计等待时间”</td></tr>
         </tbody>
@@ -728,7 +926,18 @@
 </div>
 
 <h3>11.4 审核与下线机制</h3>
-<p><strong>三重审核流程</strong>：技术审核（7-14天）→ 内容审核（7-14天）→ 经济审核（3-7天）</p>
+<p><strong>分级审核流程</strong>（与第十六章 16.1 对齐，按世界类型选用，<strong>非全部串行三重 17–35 天</strong>）：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>审核级别</th><th>流程</th><th>总周期</th></tr></thead>
+        <tbody>
+            <tr><td><strong>L1（自动化）</strong></td><td>技术+内容 AI 合并流水线；经济规则模板校验</td><td><strong>1–3 天</strong></td></tr>
+            <tr><td><strong>L2（半自动）</strong></td><td>AI 全审 + 人工抽检 10%；经济模板校验</td><td><strong>3–7 天</strong></td></tr>
+            <tr><td><strong>L3（人工）</strong></td><td>技术（7–14天）→ 内容（7–14天）→ 经济（3–7天）三重审核</td><td><strong>17–35 天</strong></td></tr>
+            <tr><td><strong>L4（精英）</strong></td><td>技术+内容合并（7–14天）→ 经济专项（3–7天）；专家评审并行</td><td><strong>10–21 天</strong></td></tr>
+        </tbody>
+    </table>
+</div>
 
 <p><strong>分级责任窗口期</strong>：</p>
 <div class="table-wrap">
@@ -762,6 +971,21 @@
         </tbody>
     </table>
 </div>
+
+<h3>11.6 违规累计记分制（VIO）</h3>
+<p>责任窗口期（11.4）内的创作者免责<strong>不适用于</strong>累计恶意违规。VIO 记分独立于窗口期，绑定创作者 UID：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>违规类型</th><th>单次扣分</th><th>12 个月累计阈值</th><th>处罚</th></tr></thead>
+        <tbody>
+            <tr><td>内容违规（色情/暴力/仇恨）</td><td>−20</td><td>≤−40 警告；≤−60 暂停创建 30 天</td><td>≤−100 永久取消 B 级以上认证</td></tr>
+            <tr><td>经济违规（子货币通胀/洗钱嫌疑）</td><td>−30</td><td>≤−60 冻结子货币发行</td><td>≤−100 世界强制下线</td></tr>
+            <tr><td>CS 刷分 / 版税欺诈</td><td>−25</td><td>≤−50 版税暂停 90 天</td><td>≤−100 罚没 ROY 质押（7.6）</td></tr>
+            <tr><td>窗口期内故意踩线重复违规</td><td>−15/次</td><td>不受窗口免责保护</td><td>同上累计</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>VIO 恢复</strong>：连续 12 个月无违规，记分按 50% 衰减；完成「创作者合规再培训」可额外恢复 20 分（每年最多 1 次）。</p>
 
 <!-- ===== 十二、平行世界·生命周期管理 ===== -->
 <h2 id="sec-12">十二、平行世界·生命周期管理</h2>
@@ -860,7 +1084,7 @@
 <h2 id="sec-15">十五、数字孪生档案与溯源系统（DTA）</h2>
 
 <h3>15.1 物件档案的总览设计</h3>
-<p>MirrorX中每一个拥有UID的物件，可通过系统调取其完整的<strong>数字孪生档案（Digital Twin Archive, DTA）</strong>，包含六大模块：</p>
+<p>Novaverse 中每一个拥有 UID 的物件，可通过系统调取其完整的<strong>数字孪生档案（Digital Twin Archive, DTA）</strong>，包含六大模块：</p>
 <ul>
     <li><strong>① 基本信息</strong>：物件名称、UID、类型、所属世界、创建时间、CS评分、物理规则、状态</li>
     <li><strong>② 属性信息</strong>：因物件类型而异（建筑→高度/层数/材料；数字人→等级/喂养时长/技能标签）</li>
@@ -1041,7 +1265,20 @@
         <tbody>
             <tr><td><strong>完全公共</strong>（机场/博物馆大堂）</td><td>无需密钥</td></tr>
             <tr><td><strong>半公共</strong>（写字楼/品牌店）</td><td>扫码授权临时密钥</td></tr>
-            <tr><td><strong>绝对私密</strong>（私人住宅）</td><td>房主VR中“画圈”加密</td></tr>
+            <tr><td><strong>绝对私密</strong>（私人住宅）</td><td>房主 VR 中「画圈」加密；<strong>默认禁止众包复刻</strong>（见 18.3）</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>18.3 私密区与众包复刻的边界（V1.1 新增）</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>规则编号</th><th>内容</th></tr></thead>
+        <tbody>
+            <tr><td><strong>PRIV-01 默认禁止</strong></td><td>标记为 L5「绝对私密」的区域，<strong>默认不参与</strong>众包复刻与 CS 计分</td></tr>
+            <tr><td><strong>PRIV-02 opt-in 贡献</strong></td><td>房主可主动开启「模糊化贡献」：仅上传去隐私化 mesh（无室内细节、无个人标识），CS 单独计为「私密贡献级」</td></tr>
+            <tr><td><strong>PRIV-03 法律穿透</strong></td><td>在 GPF 第一层（现实强制性法律）要求下，平台可依法配合执法，不受 L5 加密阻挡</td></tr>
+            <tr><td><strong>PRIV-04 半公共规则</strong></td><td>写字楼/品牌店等「半公共」区域，复刻须产权方或管理方扫码授权</td></tr>
         </tbody>
     </table>
 </div>
@@ -1104,7 +1341,7 @@
     <table>
         <thead><tr><th>阶段</th><th>条件</th></tr></thead>
         <tbody>
-            <tr><td><strong>预备期</strong></td><td>白银级数字人 + 喂养≥1年 + 人格稳定性>85%</td></tr>
+            <tr><td><strong>预备期</strong></td><td>白银级数字人 + 喂养≥2年 + 人格稳定性&gt;85%（与 19.5.1 升级路径图一致）</td></tr>
             <tr><td><strong>认证期</strong></td><td>通过伦理审查 + 签署知情同意书 + 完成BCI适配测试</td></tr>
             <tr><td><strong>激活期</strong></td><td>完成首次意识上传 + 意识状态验证通过 + 完成60天镜像期</td></tr>
         </tbody>
@@ -1139,6 +1376,90 @@
     </table>
 </div>
 
+<!-- ===== 十九.七、ASP 规范 ===== -->
+<h2 id="sec-19-7">十九.七、ASP 协议规范纲要</h2>
+<p>ASP（Avatar Sovereignty Protocol）为<strong>独立于 NOVA 平台</strong>的开放标准。NOVA 为其 Reference Implementation；完整 machine-readable spec 见附录 JSON Schema 纲要。</p>
+
+<h3>19.7.1 核心 API 端点（ASP v0.1 草案）</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>端点</th><th>方法</th><th>功能</th><th>授权等级</th></tr></thead>
+        <tbody>
+            <tr><td><code>/asp/v1/avatar/{uid}</code></td><td>GET</td><td>读取数字人公开档案摘要</td><td>用户 OAuth2</td></tr>
+            <tr><td><code>/asp/v1/avatar/{uid}/export</code></td><td>POST</td><td>导出 CIP 迁移包（人格核心）</td><td>用户本人 + 2FA</td></tr>
+            <tr><td><code>/asp/v1/avatar/{uid}/invoke</code></td><td>POST</td><td>第三方按 L1–L4 调用对话/知识/创意</td><td>TPR 评级 + 用户授权</td></tr>
+            <tr><td><code>/asp/v1/avatar/{uid}/memory</code></td><td>PATCH</td><td>追加喂养数据（带来源 COTMS 标记）</td><td>用户本人</td></tr>
+            <tr><td><code>/asp/v1/avatar/{uid}/des</code></td><td>GET</td><td>查询 DES 等级与升级进度</td><td>用户 / 继承人（经公证）</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>19.7.2 CIP 迁移包最小字段</h3>
+<div class="code-flow">
+asp_export_bundle/
+├── manifest.json          # 版本、导出时间、源平台、目标兼容性
+├── personality_core.bin   # 人格模型权重（加密）
+├── memory_index.json      # 记忆索引（含 COTMS 来源标记）
+├── cotms_labels.json      # O-0 至 O-4 全量标签
+├── des_level.json         # 青铜/白银/黄金/意识流
+├── uid_registry.json      # 根 UID（不可变更）
+└── signatures/            # 用户签名 + 平台 attestation
+</div>
+<p><strong>ASP 基金会</strong>（规划）：Phase 3 前由 NOVA 团队托管 spec repo；Phase 3 后移交独立基金会，MGOC 监督。</p>
+
+<h2 id="sec-19-8">十九.八、ASP 一致性测试套件</h2>
+<p>任何声称 ASP 兼容的实现，须通过 <code>docs/asp-conformance-tests.yaml</code> 中定义的自动化用例。CI 集成要求：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>套件</th><th>用例数</th><th>通过标准</th></tr></thead>
+        <tbody>
+            <tr><td><strong>ASP-CORE</strong></td><td>12</td><td>manifest / uid / cotms 字段 100% 合规</td></tr>
+            <tr><td><strong>ASP-EXPORT</strong></td><td>8</td><td>CIP 包可 round-trip 导入导出</td></tr>
+            <tr><td><strong>ASP-INVOKE</strong></td><td>6</td><td>L1–L4 调用边界与 TPR 拒绝路径</td></tr>
+            <tr><td><strong>ASP-SECURITY</strong></td><td>5</td><td>未授权 memory/des 访问须 403</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>CON-01</strong>：Reference Implementation（NOVA）须在每个 minor 版本发布前全绿。</p>
+<p><strong>CON-02</strong>：第三方实现通过 ≥90% 用例可获「ASP Compatible」标识；100% 获「ASP Certified」。</p>
+<p><strong>CON-03</strong>：不兼容 <code>asp_version</code> 须显式拒绝并返回 <code>426 Upgrade Required</code>。</p>
+
+<h2 id="sec-19-9">十九.九、ASP 基金会与第三方认证（V1.6）</h2>
+<p>Phase 3 前由 NOVA 团队托管 spec；Phase 3 起移交<strong>ASP 基金会</strong>独立治理。章程与认证流程见 <code>docs/asp-foundation/</code>。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>机构</th><th>职责</th><th>监督</th></tr></thead>
+        <tbody>
+            <tr><td><strong>ASP 基金会理事会</strong></td><td>维护 OpenAPI、Schema、一致性测试套件</td><td>MGOC 年度审计</td></tr>
+            <tr><td><strong>认证工作组</strong></td><td>执行第三方 Conformance 测试与标识授予</td><td>理事会 2/3 任命</td></tr>
+            <tr><td><strong>Reference Implementation 组</strong></td><td>NOVA 平台实现，须每 minor 版本全绿</td><td>公开 CI 报告</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>认证等级</strong>：</p>
+<ul>
+    <li><strong>ASP Compatible</strong> — ≥90% 一致性测试通过 + 安全套件无 FAIL</li>
+    <li><strong>ASP Certified</strong> — 100% 通过 + 独立安全审计 + 年度复测</li>
+</ul>
+<p><strong>FND-01</strong>：基金会 repo 与 NOVA 主仓分离；spec 变更须 RFC + 30 天公示。</p>
+<p><strong>FND-02</strong>：认证标识不得用于 DES「意识上传」或超出 COTMS 标注能力的营销。</p>
+
+<h2 id="sec-19-10">十九.十、ASP RFC 公开流程（V1.7）</h2>
+<p>ASP 规范变更须走 <strong>RFC-ASP-NNN</strong> 流程。模板与细则见 <code>docs/asp-foundation/RFC-PROCESS.md</code>。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>阶段</th><th>时长</th><th>动作</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Draft</strong></td><td>—</td><td>PR 提交 <code>rfcs/RFC-ASP-NNN.md</code></td></tr>
+            <tr><td><strong>Comment</strong></td><td>30 天</td><td>公开评论；Reference Implementation 影响评估</td></tr>
+            <tr><td><strong>Last Call</strong></td><td>7 天</td><td>无阻塞性反对则进入 Accepted</td></tr>
+            <tr><td><strong>Accepted</strong></td><td>—</td><td>合并 spec；bump <code>asp_version</code> 若 breaking</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>RFC-01</strong>：Breaking change 须 major 版本 + 12 个月兼容窗口。</p>
+<p><strong>RFC-02</strong>：独立 GitHub org 规划名 <code>asp-foundation</code>（Phase 3 前托管于 NOVA monorepo <code>docs/asp-foundation/</code>）。</p>
+
 <!-- ===== 二十、数字动物 ===== -->
 <h2 id="sec-20">二十、数字动物与生态系统</h2>
 <div class="table-wrap">
@@ -1162,20 +1483,21 @@
     <table>
         <thead><tr><th>轨道</th><th>名称</th><th>性质</th><th>核心用途</th></tr></thead>
         <tbody>
-            <tr><td><strong>第一轨</strong></td><td><strong>NPT（NOVA Points）</strong></td><td>内部稳定积分</td><td>日常消费、流通媒介、劳动报酬</td></tr>
+            <tr><td><strong>第一轨</strong></td><td><strong>NPT（NOVA Points）</strong></td><td>劳动与流通积分（价目锚定）</td><td>日常消费、流通媒介、劳动报酬</td></tr>
             <tr><td><strong>第二轨</strong></td><td><strong>NVC（NOVA Coin）</strong></td><td>外部价值储值通证</td><td>大额资产、投资、跨平台结算</td></tr>
             <tr><td><strong>连接器</strong></td><td><strong>AMM池</strong></td><td>透明兑换通道</td><td>NPT↔NVC 由市场供需决定</td></tr>
         </tbody>
     </table>
 </div>
 
-<h3>21.2 NPT的双重角色</h3>
+<h3>21.2 NPT的双重角色与购买力定义</h3>
 <ul>
-    <li><strong>角色一：劳动报酬</strong>（从用户激励体系视角）——用户通过贡献行为（上传数据、修正错误、参与治理）获得NPT，是对其劳动的价值认可</li>
-    <li><strong>角色二：流通媒介</strong>（从双轨制经济视角）——NPT在平台内部作为日常消费（门票、交通、物品交易）和支付的工具，购买力永久固定</li>
+    <li><strong>角色一：劳动报酬</strong>——用户通过贡献行为（上传数据、修正错误、参与治理）获得 NPT，是对其劳动的价值认可</li>
+    <li><strong>角色二：流通媒介</strong>——NPT 在平台内部作为日常消费与支付工具</li>
 </ul>
+<p><strong>购买力定义（V1.1 澄清）</strong>：NPT 采用<strong>「平台标准价目锚定」</strong>——平台公布的文明级/商业级服务目录价以 NPT 标价，在<strong>未修订价目表</strong>期间保持稳定；消费时的<strong>销毁率</strong>改变的是「有效支付成本」，不改变价目表名义价格。NPT 总流通量可因劳动贡献而<strong>增发</strong>，可因消费而<strong>销毁</strong>，故不承诺绝对通缩或绝对固定总量。</p>
 
-<h3>21.3 NPT柔性通缩机制</h3>
+<h3>21.3 NPT 消费销毁与净流通机制</h3>
 <div class="table-wrap">
     <table>
         <thead><tr><th>消费额</th><th>销毁率</th><th>返现率（=销毁率×20%）</th><th>实际消费成本</th></tr></thead>
@@ -1186,7 +1508,8 @@
         </tbody>
     </table>
 </div>
-<p><strong>返现率 = 销毁率 × 20%</strong>（返现率始终低于销毁率，确保NPT总体通缩）</p>
+<p><strong>净流通原则（V1.2 澄清）</strong>：在劳动贡献增发与消费销毁并存的前提下，平台目标为<strong>「长期净流通量温和收敛」</strong>——当流通量连续 2 季度增速 &gt; 消费销毁量时，经济委员会可下调增发系数或上调销毁率；<strong>不承诺</strong>绝对通缩或固定总量。下表为消费侧销毁参数：</p>
+<p><strong>返现率 = 销毁率 × 20%</strong>（返现率始终低于销毁率，消费侧倾向减少净流通量）</p>
 
 <h3>21.4 AMM自动做市池</h3>
 <div class="code-flow">
@@ -1201,7 +1524,7 @@ AMM池 = { NPT总量 , NVC总量 }
     <table>
         <thead><tr><th>规则</th><th>内容</th></tr></thead>
         <tbody>
-            <tr><td><strong>动态汇率调整</strong></td><td>AMM池根据NPT和NVC的流通量实时调整汇率，当NPT相对NVC升值超过5%时，自动增加NPT发行量或减少NVC发行量</td></tr>
+            <tr><td><strong>动态汇率调整</strong></td><td>AMM 池根据 NPT 和 NVC 的流通量实时调整<strong>兑换汇率</strong>；当 NPT 相对 NVC 升值超过 5% 时，优先从<strong>劳动贡献储备池</strong>释放 NPT 注入 AMM（非无上限增发），并记录于链上治理日志</td></tr>
             <tr><td><strong>套利警示</strong></td><td>当用户单次兑换超过1,000 NVC时，系统提示“当前汇率存在套利空间，建议分批兑换”</td></tr>
             <tr><td><strong>流动性优先</strong></td><td>保证NPT→NVC和NVC→NPT的双向流动性，防止任何方向被卡死</td></tr>
         </tbody>
@@ -1217,10 +1540,59 @@ AMM池 = { NPT总量 , NVC总量 }
             <tr><td><strong>白银会员</strong></td><td>≥10,000 NPT</td><td>投票权重x1.5</td></tr>
             <tr><td><strong>黄金会员</strong></td><td>≥100,000 NPT</td><td>区域议会被选举权</td></tr>
             <tr><td><strong>钻石会员</strong></td><td>≥1,000,000 NPT</td><td>新功能内测资格</td></tr>
-            <tr><td><strong>创世股东</strong></td><td>≥10,000,000 NPT</td><td>季度利润NVC空投分红</td></tr>
+            <tr><td><strong>创世股东</strong></td><td>≥10,000,000 NPT</td><td>季度利润 NVC 空投分红（Phase 3 后启用）</td></tr>
         </tbody>
     </table>
 </div>
+<p><strong>创始期治理约束（V1.2 新增）</strong>：Phase 0–2（DAU &lt;10 万）期间，积分加权投票<strong>上限为 ×1.2</strong>（原 ×1.5 仅在 Phase 3 后生效）；重大决策由运营委员会 + MGOC 联席，DAO 投票为咨询性质。</p>
+
+<h3>21.7 宏观经济学参数表（V1.3 · 仿真基准）</h3>
+<p>以下为 agent-based 宏观仿真之<strong>基准参数</strong>（非预测承诺），用于压力测试 NPT/NVC 双轨：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>参数</th><th>符号</th><th>基准值</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td>劳动贡献 NPT 日增发上限</td><td>ΔNPT<sub>earn</sub></td><td>人均 50 NPT/日</td><td>超出部分进入储备池</td></tr>
+            <tr><td>消费销毁率（中位）</td><td>β</td><td>50%</td><td>见 21.3 分档</td></tr>
+            <tr><td>NPT→NVC 月兑换上限</td><td>—</td><td>5,000 NVC/用户</td><td>见 21.4</td></tr>
+            <tr><td>CS 贡献者占 DAU 比例</td><td>ρ<sub>c</sub></td><td>5% → 15%（Phase 1–3）</td><td>众包飞轮健康区间</td></tr>
+            <tr><td>算力成本占收入比（红线）</td><td>γ</td><td>40%</td><td>见 40.4 红色预警</td></tr>
+            <tr><td>永生订阅渗透率（中性）</td><td>π</td><td>1%</td><td>见 30.6</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>仿真结论（基准跑）</strong>：在 π=1%、ρ<sub>c</sub>=10%、γ&lt;35% 条件下，第 10 年平台可实现盈亏平衡；π≥5% 时须提前扩容算力或上调 RPC 降级阈值。</p>
+
+<h3>21.8 宏观仿真 Notebook 结构（V1.5 · 可运行）</h3>
+<p>完整实现见 <code>docs/macro-simulation/</code>：<strong>nova_macro.py</strong>（CLI）与 <strong>nova_macro_v1.5.ipynb</strong>（交互）。参数文件 <code>params/baseline_v1.5.yaml</code>。</p>
+<p>完整可复现仿真见仓库 <code>docs/macro-simulation/</code>。Notebook 分四步：</p>
+<ol>
+    <li><strong>参数加载</strong>：读取 21.7 基准表 + 30.6 敏感性区间</li>
+    <li><strong>Agent 初始化</strong>：贡献者 / 消费者 / 平台三类 agent，DAU 按 Phase 曲线增长</li>
+    <li><strong>双轨结算</strong>：NPT 增发/销毁 + NVC 锁仓释放（Phase 3 后启用）</li>
+    <li><strong>剪刀差监控</strong>：输出 γ 时序，触发 40.4 黄/橙/红预警之 Monte Carlo 概率</li>
+</ol>
+
+<h3 id="sec-21-9">21.9 Monte Carlo 压力测试（V1.6）</h3>
+<p>在基准参数上叠加随机扰动，评估财务与算力剪刀差的<strong>概率分布</strong>。实现：<code>docs/macro-simulation/monte_carlo.py</code>，参数 <code>params/baseline_v1.6.yaml</code>。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>扰动变量</th><th>分布</th><th>用途</th></tr></thead>
+        <tbody>
+            <tr><td>永生订阅渗透率 π</td><td>Uniform(0.5%, 5%)</td><td>收入不确定性</td></tr>
+            <tr><td>ARPU</td><td>Normal(500, 100) USD</td><td>定价敏感性</td></tr>
+            <tr><td>算力成本系数</td><td>Uniform(0.45, 0.65)</td><td>γ 剪刀差</td></tr>
+            <tr><td>DAU 增长倍率</td><td>LogNormal(μ=1, σ=0.3)</td><td>冷启动风险</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>MC-01 预警阈值</strong>（默认 10,000 次模拟 · 20 年 horizon）：</p>
+<ul>
+    <li>P(γ &gt; 50% 连续 12M) &gt; 30% → <strong>黄色</strong>：收紧 RPC Phase 0 栈</li>
+    <li>P(γ &gt; 50% 连续 12M) &gt; 50% → <strong>橙色</strong>：推迟 Phase 3 NVC 主网</li>
+    <li>P(累计收入 &lt; 算力成本) &gt; 40% → <strong>红色</strong>：启动 40.4 应急委员会</li>
+</ul>
+<p><strong>MC-02</strong>：每季度重跑；结果写入治理透明日志（与 22.7 API 扩展字段 <code>macro_stress_hash</code> 可选对接）。</p>
 
 <!-- ===== 二十二、NVC ===== -->
 <h2 id="sec-22">二十二、区块链货币系统（NVC）</h2>
@@ -1279,6 +1651,53 @@ AMM池 = { NPT总量 , NVC总量 }
         </tbody>
     </table>
 </div>
+
+<h3>22.5 NVC 分区合规上线 Playbook（V1.3 新增）</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>分区</th><th>上线策略</th><th>NVC 形态</th><th>用户可见性</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Zone A（沙盒）</strong></td><td>Phase 2 内测 · 邀请制</td><td>测试网 NVC（无 fiat 兑换）</td><td>开发者 + MGOC 观察员</td></tr>
+            <tr><td><strong>Zone B（积分区）</strong></td><td>Phase 0–2 默认</td><td>仅 NPT；NVC 不可见不可兑换</td><td>全体用户</td></tr>
+            <tr><td><strong>Zone C（合规区）</strong></td><td>Phase 3 · 逐国牌照</td><td>主网 NVC + 法币网关（持牌伙伴）</td><td>通过 KYC 的用户</td></tr>
+            <tr><td><strong>Zone D（受限区）</strong></td><td>监管禁止或未定</td><td>NVC 冻结；仅 NPT 消费</td><td>Geo-fence 自动切换</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>CP-01</strong>：任何 Zone C 上线前，须完成当地法律 memo + MGOC 伦理审查 + 30 天公示。</p>
+<p><strong>CP-02</strong>：Zone D 用户资产不受影响；已持有 NVC 可在 Zone C 提现或 CIP 导出至外部钱包（若合法）。</p>
+<p><strong>CP-03</strong>：AMM 池仅在 Zone C 开放；Zone A/B 禁止 NPT↔NVC 兑换以防监管套利。</p>
+
+<h3>22.6 Zone C 各国/地区上线追踪表（V1.4 模板）</h3>
+<p>Phase 3 启动后，平台每季度更新<strong>公开 dashboard</strong>（治理透明日志之一），初始模板如下：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>法域</th><th>当前 Zone</th><th>牌照/合规状态</th><th>NVC 法币网关</th><th>预计 Zone C 时间</th></tr></thead>
+        <tbody>
+            <tr><td>新加坡</td><td>B → C 评估中</td><td>MAS 咨询中</td><td>待定持牌伙伴</td><td>Phase 3 +6M</td></tr>
+            <tr><td>欧盟（MiCA）</td><td>D</td><td>CASP 牌照路径研究中</td><td>—</td><td>Phase 3 +18M</td></tr>
+            <tr><td>美国</td><td>D</td><td>州级 MTL / 联邦评估</td><td>—</td><td>未定</td></tr>
+            <tr><td>中国大陆</td><td>D</td><td>仅 NPT 积分区；无 NVC</td><td>—</td><td>不适用</td></tr>
+            <tr><td>日本</td><td>B</td><td>PSA 框架评估</td><td>—</td><td>Phase 3 +12M</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>CP-04</strong>：表中「未定」法域默认 Zone D；用户 geo-fence 自动切换，链上资产不受影响。</p>
+
+<h3 id="sec-22-7">22.7 Zone C 公开 Dashboard API（V1.5）</h3>
+<p>Phase 3 起，治理透明日志通过<strong>只读公开 API</strong>提供各国 Zone 状态。完整 OpenAPI 见 <code>docs/zone-c-dashboard-openapi.yaml</code>。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>端点</th><th>方法</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td><code>/public/v1/zones</code></td><td>GET</td><td>全法域 Zone 列表（A/B/C/D）</td></tr>
+            <tr><td><code>/public/v1/zones/{jurisdiction}</code></td><td>GET</td><td>单法域详情 + 合规 memo 摘要 hash</td></tr>
+            <tr><td><code>/public/v1/zones/changelog</code></td><td>GET</td><td>Zone 变更历史（分页）</td></tr>
+            <tr><td><code>/public/v1/nvc-gateways</code></td><td>GET</td><td>Zone C 法币网关状态（不含 KYC 数据）</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>CP-05</strong>：API 响应须含 <code>last_updated</code> 与 <code>data_hash</code>；季度 MGOC 审计比对链上治理日志。</p>
 
 <!-- ===== 二十三、数字人跨平台盈利 ===== -->
 <h2 id="sec-23">二十三、数字人跨平台盈利与结算体系</h2>
@@ -1388,15 +1807,15 @@ AMM池 = { NPT总量 , NVC总量 }
 <h3>29.1 终结程序的三重触发机制</h3>
 <div class="table-wrap">
     <table>
-        <thead><tr><th>触发条件</th><th>权重</th><th>说明</th></tr></thead>
+        <thead><tr><th>触发条件</th><th>说明</th></tr></thead>
         <tbody>
-            <tr><td><strong>① 平台技术判断</strong></td><td>33%</td><td>平台技术团队认定“技术架构已彻底过时”或“无法继续维护”</td></tr>
-            <tr><td><strong>② 用户投票</strong></td><td>34%</td><td>全球用户投票≥80%赞成“启动终结程序”</td></tr>
-            <tr><td><strong>③ 国际共识</strong></td><td>33%</td><td>联合国教科文组织出具《文明阶段转移认定书》</td></tr>
+            <tr><td><strong>① 平台技术判断</strong></td><td>平台技术团队认定「技术架构已彻底过时」或「无法继续维护」</td></tr>
+            <tr><td><strong>② 用户投票</strong></td><td>全球用户投票 ≥80% 赞成「启动终结程序」</td></tr>
+            <tr><td><strong>③ 国际共识</strong></td><td>联合国教科文组织出具《文明阶段转移认定书》（或同等独立第三方文明机构认定）</td></tr>
         </tbody>
     </table>
 </div>
-<p><strong>触发逻辑</strong>：三重触发中<strong>至少两重条件同时满足</strong>，方可启动终结程序。</p>
+<p><strong>触发逻辑</strong>：上述三重条件中<strong>至少同时满足两项</strong>，方可启动终结程序（权重列已废止，以布尔条件为准）。</p>
 
 <h3>29.2 平台终结的三个场景</h3>
 <div class="table-wrap">
@@ -1445,16 +1864,56 @@ AMM池 = { NPT总量 , NVC总量 }
     <li>若投入占比连续3年下降，自动触发全球用户投票</li>
 </ul>
 
+<p><strong>平台收入分配优先级栈（RFC-Finance-01，V1.1 新增）</strong>：当多项分配承诺发生冲突时，按以下顺序执行，上一层完成后才分配下一层：</p>
+<ol>
+    <li><strong>运营成本与法定储备</strong>（含算力、人力、合规）</li>
+    <li><strong>RPC 算力扩容</strong>（目标：平台收入的 5%，见 11.3）</li>
+    <li><strong>文明遗产基金</strong>（目标：平台收入的 3%）</li>
+    <li><strong>NVC 回购销毁</strong>（目标：运营收入的 5%，见 22.3）</li>
+    <li><strong>创作者/贡献者分成</strong>（版税、平行世界分成等）</li>
+    <li><strong>股东/储备盈余</strong></li>
+</ol>
+<p>早期收入不足时，②–④ 项按<strong>同比例缩减</strong>，并在《文明级服务成本报告》中公开披露。</p>
+
 <!-- ===== 二十九.六、熵减原则 ===== -->
 <h2 id="sec-29-6">二十九.六、数字生态的“熵减”原则</h2>
 <div class="table-wrap">
     <table>
         <thead><tr><th>机制</th><th>内容</th><th>触发条件</th></tr></thead>
         <tbody>
-            <tr><td><strong>数字生命的“自然消亡”</strong></td><td>数字人（非永生体）和数字动物在长期不活跃后，可进入“自然消亡”状态</td><td>连续5年无交互且无继承人维护</td></tr>
+            <tr><td><strong>数字生命的“自然消亡”</strong></td><td>非黄金级数字人及数字动物在长期不活跃后，可进入「自然消亡」状态（详见二十九.七 DES 矩阵）</td><td>连续5年无交互且无继承人维护</td></tr>
             <tr><td><strong>数字物件的“时间风化”</strong></td><td>超过100年无人访问的物件，仅保留UID+核心摘要</td><td>100年无人访问</td></tr>
             <tr><td><strong>文明“修剪”权</strong></td><td>经伦理委员会+社区DAO投票（≥80%）后，移除无价值物件的详细存储</td><td>无历史/文化/学术价值</td></tr>
             <tr><td><strong>“熵减”与“永续”的平衡</strong></td><td>明确“永续”的不是每个物件的完整数据，而是“文明的核心记忆”</td><td>—</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 id="sec-29-7">二十九.七、DES 等级 × 自然消亡 × 保险库矩阵</h2>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>DES 等级</th><th>5 年无交互且无继承人</th><th>文明保险库</th><th>熵减/修剪</th></tr></thead>
+        <tbody>
+            <tr><td><strong>青铜级</strong></td><td>可进入「休眠」；10 年后可归档为 UID+摘要</td><td>不强制</td><td>可修剪详细存储（非 UID）</td></tr>
+            <tr><td><strong>白银级</strong></td><td>可进入「休眠」；须继承人或用户预设方可激活消亡</td><td>可选备份摘要</td><td>不可修剪人格核心</td></tr>
+            <tr><td><strong>黄金级</strong></td><td><strong>不适用自然消亡</strong>；仅可按用户遗嘱或司法程序休眠</td><td><strong>核心摘要永久备份</strong></td><td><strong>豁免</strong>文明修剪</td></tr>
+            <tr><td><strong>意识流完全体</strong></td><td>同黄金级</td><td>完整分段加密备份</td><td>完全豁免</td></tr>
+        </tbody>
+    </table>
+</div>
+<p>继承人或用户在有效期内的<strong>书面异议</strong>，可暂停任何等级的消亡或修剪程序 90 天，并进入正式仲裁。</p>
+
+<h2 id="sec-29-8">二十九.八、文化遗产 MOU 模板</h2>
+<p>Phase 0 十地标及后续 UNESCO 名录接入，须与产权方/管理机构签署 MOU。完整模板见 <code>docs/unesco-mou-template.md</code>，核心条款：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>条款</th><th>内容</th></tr></thead>
+        <tbody>
+            <tr><td><strong>CH-01 数字化范围</strong></td><td>明确 L1–L4 可复刻区域与禁区</td></tr>
+            <tr><td><strong>CH-02 署名与收益</strong></td><td>管理机构获 ROY 分成与 DTA 永久署名</td></tr>
+            <tr><td><strong>CH-03 修改权</strong></td><td>重大 CS 变更须管理机构书面同意</td></tr>
+            <tr><td><strong>CH-04 DSNZ</strong></td><td>主权争议时数据冻结，不单方面删除</td></tr>
+            <tr><td><strong>CH-05 终止</strong></td><td>终止后 180 天内下线可识别视觉元素，UID 摘要保留</td></tr>
         </tbody>
     </table>
 </div>
@@ -1534,6 +1993,22 @@ AMM池 = { NPT总量 , NVC总量 }
         </tbody>
     </table>
 </div>
+
+<h3>30.6 敏感性分析：永生订阅渗透率（V1.2 新增）</h3>
+<p>第 20 年「永生订阅 $150 亿+」为<strong>乐观上限</strong>。以下为中性模型下的敏感性区间（假设全球付费用户基数 5,000 万）：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>永生订阅渗透率</th><th>ARPU（年）</th><th>第 20 年永生收入</th><th>第 20 年总收入区间</th></tr></thead>
+        <tbody>
+            <tr><td><strong>0.1%（悲观）</strong></td><td>$200</td><td>~$1,000 万</td><td>$15–25 亿</td></tr>
+            <tr><td><strong>1%（中性）</strong></td><td>$500</td><td>~$2.5 亿</td><td>$35–50 亿</td></tr>
+            <tr><td><strong>5%（乐观）</strong></td><td>$800</td><td>~$20 亿</td><td>$70–94 亿</td></tr>
+            <tr><td><strong>10%（上限）</strong></td><td>$1,000</td><td>~$50 亿</td><td>$100–150 亿</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>结论</strong>：财务模型须以<strong>1% 渗透率中性情景</strong>做融资与算力规划；$94 亿为 5% 渗透率下的可达上限，非基准承诺。</p>
+
 <!-- ===== 三十一、用户激励体系 ===== -->
 <h2 id="sec-31">三十一、用户激励体系</h2>
 
@@ -1671,6 +2146,18 @@ AMM池 = { NPT总量 , NVC总量 }
             <tr><td><strong>治理模拟训练</strong></td><td>青年观察员参与“治理模拟训练”——模拟治理场景，培养决策能力</td></tr>
             <tr><td><strong>治理知识库</strong></td><td>建立“治理知识库”，收录决策原则、历史案例、最佳实践、失败教训</td></tr>
             <tr><td><strong>导师制深化</strong></td><td>每位青年观察员配备1名正式委员作为“导师”，每月至少1次1对1指导</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>32.5 创始期治理过渡方案（V1.2 新增）</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>阶段</th><th>DAU 门槛</th><th>治理模式</th><th>全球投票适用范围</th></tr></thead>
+        <tbody>
+            <tr><td><strong>创始期</strong></td><td>&lt;10 万</td><td>核心团队 + MGOC（咨询）+ 伦理委员会</td><td>仅文明宪章解释与重大伦理事项（非绑定）</td></tr>
+            <tr><td><strong>过渡期</strong></td><td>10 万–100 万</td><td>混合治理：运营委员会 + 区域 DAO</td><td>经济参数、功能上线；宪章修订仍须 ≥66.7%</td></tr>
+            <tr><td><strong>成熟期</strong></td><td>&gt;100 万</td><td>DAO 主导 + MGOC 监督</td><td>全范围，含平台终结动议</td></tr>
         </tbody>
     </table>
 </div>
@@ -1869,6 +2356,18 @@ AMM池 = { NPT总量 , NVC总量 }
     </table>
 </div>
 
+<h3>36.5 人格完整性保护程序（V1.1 新增 · 对应宪章第二条）</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>制裁类型</th><th>授权主体</th><th>额外条件</th></tr></thead>
+        <tbody>
+            <tr><td>数字人休眠</td><td>用户本人 / 继承人 / 第一层司法庭</td><td>须提前 7 天通知</td></tr>
+            <tr><td>数字人重启（人格重置）</td><td>用户本人书面授权 / 最高司法委员会</td><td>黄金级须 MGOC 审查；须保留重置前人格快照</td></tr>
+            <tr><td>数字人封禁（永久删除）</td><td>最高司法委员会 + 全球用户投票 ≥66.7%（仅针对黄金级）</td><td>青铜/白银级：用户本人或继承人即可申请删除</td></tr>
+        </tbody>
+    </table>
+</div>
+
 <!-- ===== 三十七、开放平台 ===== -->
 <h2 id="sec-37">三十七、开放平台体系</h2>
 
@@ -1992,6 +2491,21 @@ AI自动初审（60-70%，秒级-分钟级）
     </table>
 </div>
 
+<h2 id="sec-38-8">三十八.八、文明能力解锁路线图</h2>
+<p>MVC 达标之前，以下能力<strong>不得默认开启</strong>，须按阶段解锁：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>阶段</th><th>解锁能力</th><th>前置条件</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Phase 0</strong></td><td>1 城 10 地标 · CS 飞轮 · NPT 激励 · DTA/UID</td><td>工程启动</td></tr>
+            <tr><td><strong>Phase 1</strong></td><td>青铜/白银 DES · 1 个平行世界模板</td><td>Phase 0 地标 CS≥70%</td></tr>
+            <tr><td><strong>Phase 2</strong></td><td>开放平行世界生态 · 正式司法体系</td><td>DAU≥10 万 · 经济自洽 1 年</td></tr>
+            <tr><td><strong>Phase 3</strong></td><td>NVC 主网 · 虚拟地皮 · 全球 DAO 投票</td><td>MVC 五项中达标 3 项</td></tr>
+            <tr><td><strong>Phase 4</strong></td><td>黄金级 DES · ASP 第三方生态 · 意识流研究通道</td><td>MVC 全部达标 + MGOC 批准</td></tr>
+        </tbody>
+    </table>
+</div>
+
 <!-- ===== 三十八.七、主权宣言 ===== -->
 <h2 id="sec-38-7">三十八.七、数字文明主权宣言</h2>
 <ul>
@@ -2003,6 +2517,21 @@ AI自动初审（60-70%，秒级-分钟级）
 
 <!-- ===== 三十九、演进路线图 ===== -->
 <h2 id="sec-39">三十九、演进路线图</h2>
+<p><strong>Phase 命名对照（V1.2）</strong>：本白皮书存在三套 Phase 编号，含义不同但可对齐：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>三十八.八（能力解锁）</th><th>三十九（产品版本）</th><th>四十（工程预算）</th><th>对齐说明</th></tr></thead>
+        <tbody>
+            <tr><td>Phase 0</td><td>—（白皮书 v1.x–v1.6 文档期）</td><td>Phase 0 MVP</td><td>1 城 10 地标 · $230–530 万</td></tr>
+            <tr><td>Phase 1</td><td>Phase 1（v1.1–v1.4）</td><td>Phase 1 基座</td><td>众包 + CS · DES 青铜/白银</td></tr>
+            <tr><td>Phase 2</td><td>Phase 2（v1.5–v1.9）</td><td>Phase 2 生态</td><td>数字人 + 造物 + 平行世界</td></tr>
+            <tr><td>Phase 3</td><td>Phase 3（v2.0–v2.5）</td><td>Phase 3 规模化</td><td>NVC 主网 · 地皮 · 交通</td></tr>
+            <tr><td>Phase 4</td><td>Phase 4–5（v3.0+）</td><td>Phase 4 永生</td><td>黄金 DES · 意识流研究</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>39.1 产品版本演进</h3>
 <div class="table-wrap">
     <table>
         <thead><tr><th>阶段</th><th>版本</th><th>核心任务</th></tr></thead>
@@ -2116,6 +2645,102 @@ AI自动初审（60-70%，秒级-分钟级）
 </div>
 <p><strong>三条核心建议</strong>：先做“窄而深”（1城+10地标）→ B端养C端 → 拥抱开源与生态。</p>
 
+<h3>40.6 Phase 0 工程验收清单（V1.4 · 完整版见附录）</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>验收项</th><th>标准</th><th>优先级</th></tr></thead>
+        <tbody>
+            <tr><td>1 城 L0 基底</td><td>OSM+DEM 接入，行政边界正确</td><td>P0</td></tr>
+            <tr><td>10 地标 CS≥70%</td><td>B 端扫描 + 众包验证通过</td><td>P0</td></tr>
+            <tr><td>CS 流水线</td><td>上传→评分→L1 渲染 &lt;5 分钟</td><td>P0</td></tr>
+            <tr><td>UID/DTA</td><td>100% 物件可查询简要层档案</td><td>P0</td></tr>
+            <tr><td>NPT 激励</td><td>贡献者日增发可审计</td><td>P0</td></tr>
+            <tr><td>Zone B</td><td>无 NVC 入口；AMM 不可见</td><td>P0</td></tr>
+            <tr><td>ASP export v0.1</td><td><code>/export</code> 生成合法 manifest.json</td><td>P1</td></tr>
+            <tr><td>CS-CHAIN 过渡</td><td>每日 Merkle root 上链</td><td>P1</td></tr>
+            <tr><td>DAU 里程碑</td><td>Phase 0 末 ≥5,000 DAU（单城）</td><td>P1</td></tr>
+            <tr><td>算力 γ</td><td>算力成本/收入 &lt;50%</td><td>P0</td></tr>
+        </tbody>
+    </table>
+</div>
+<p>逐项勾选表见附录 <a href="#sec-phase0">Phase 0 工程验收清单</a>。</p>
+
+<h3 id="sec-40-7">40.7 Phase 0 标杆城 Demo 环境规范（V1.5）</h3>
+<p>对外演示与投资人 walkthrough 使用<strong>独立 Demo 栈</strong>，与生产隔离。完整规范见 <code>docs/phase0-demo-spec.md</code>。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>组件</th><th>Demo 要求</th></tr></thead>
+        <tbody>
+            <tr><td><strong>城市范围</strong></td><td>与 P0-01 选定城一致；Demo 账号只读漫游</td></tr>
+            <tr><td><strong>地标</strong></td><td>10 地标 CS≥70% 全可 VR 进入；预置 3 条导览路线</td></tr>
+            <tr><td><strong>众包</strong></td><td>Demo 上传写入沙箱链；不污染生产 CS-CHAIN</td></tr>
+            <tr><td><strong>经济</strong></td><td>预置 10,000 NPT 体验额度；无真实 NVC/法币</td></tr>
+            <tr><td><strong>SLA</strong></td><td>演示时段 P95 加载 &lt;8s；99% 可用（非 24×7 承诺）</td></tr>
+            <tr><td><strong>合规</strong></td><td>Demo 页显式标注「非最终产品 · Zone B 模拟」</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>DEMO-01</strong>：Demo 环境 URL 须在治理日志公示；重大版本与生产 Phase 0 同步验收。</p>
+
+<h3 id="sec-40-8">40.8 Phase 0 标杆城选定与社区投票（V1.6）</h3>
+<p>「1 城 10 地标」之城市须在 Phase 0 启动前经<strong>公示 + 加权投票</strong>确定。完整流程见 <code>docs/phase0-city-selection.md</code>。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>阶段</th><th>时长</th><th>动作</th></tr></thead>
+        <tbody>
+            <tr><td><strong>RFP 候选</strong></td><td>14 天</td><td>发布 3–5 城候选（坐标、10 地标清单、B 端扫描可行性）</td></tr>
+            <tr><td><strong>社区评议</strong></td><td>14 天</td><td>论坛 + 治理日志评论；MGOC 伦理与合规预审</td></tr>
+            <tr><td><strong>加权投票</strong></td><td>7 天</td><td>见下表权重；须 ≥5,000 有效票</td></tr>
+            <tr><td><strong>公示生效</strong></td><td>7 天</td><td>胜选城写入 P0-01；异议期后锁定</td></tr>
+        </tbody>
+    </table>
+</div>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>投票权重（创始期 · DAU&lt;10 万）</th><th>比例</th></tr></thead>
+        <tbody>
+            <tr><td>注册 Novan（完成宪章学习）</td><td>40%</td></tr>
+            <tr><td>已验证贡献者（≥1 次 CS 贡献记录）</td><td>30%</td></tr>
+            <tr><td>技术委员会 + 产品委员会</td><td>20%</td></tr>
+            <tr><td>MGOC 伦理委员会（否决权仅用于合规红线）</td><td>10%</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>CITY-01</strong>：胜选城须满足 OSM L0 完整、≥10 个可 CS≥70% 地标、当地 B 端扫描合作意向书（九.六 SLA 草案）。</p>
+<p><strong>CITY-02</strong>：与 32.5 创始期治理一致——全球绑定投票在 DAU≥10 万前不启用；本流程为<strong>标杆城专项</strong>例外。</p>
+
+<h3 id="sec-40-9">40.9 B 端扫描招标包（V1.7）</h3>
+<p>Phase 0 十地标官方扫描须通过公开招标。完整 RFP 见 <code>docs/phase0-procurement/scan-rfp.md</code>；文化遗产 MOU 打包清单见 <code>heritage-mou-checklist.md</code>。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>交付物</th><th>标准</th><th>预算参考</th></tr></thead>
+        <tbody>
+            <tr><td>10 地标 LiDAR/全景扫描</td><td>CS≥70% · glTF/3D Tiles</td><td>$80–150 万</td></tr>
+            <tr><td>L0 OSM+DEM 质检</td><td>空洞率 ≤0.1%</td><td>$5–10 万</td></tr>
+            <tr><td>数据 SLA 签署</td><td>九.六 模板</td><td>—</td></tr>
+            <tr><td>文化遗产 MOU</td><td>29.8 模板 · ≥2 处</td><td>法务另计</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>RFP-01</strong>：投标方须提交 1 个试点地标 48h 内样片；技术委员会盲评 CS 预估。</p>
+<p><strong>RFP-02</strong>：中标后数据 <code>provenance.source</code> 永久标注；众包增强不得删除来源链。</p>
+
+<h3 id="sec-40-10">40.10 Phase 0 开源客户端 MVP 规范（V1.7）</h3>
+<p>Phase 0 可漫游客户端以<strong>开源 repo</strong>交付。架构与仓库规范见 <code>docs/phase0-client-mvp/</code>。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>模块</th><th>技术选型</th><th>Phase 0 范围</th></tr></thead>
+        <tbody>
+            <tr><td><strong>渲染</strong></td><td>CesiumJS / Three.js + 3D Tiles</td><td>L0–L2 漫游 + 10 地标 VR</td></tr>
+            <tr><td><strong>众包上传</strong></td><td>Web 端视频/GS 流水线 API</td><td>沙箱 + 生产双环境</td></tr>
+            <tr><td><strong>身份</strong></td><td>OAuth2 · 宪章学习 gate</td><td>Zone B 账号</td></tr>
+            <tr><td><strong>许可</strong></td><td>Apache 2.0（客户端）</td><td>后端 API 闭源可接受</td></tr>
+        </tbody>
+    </table>
+</div>
+<p><strong>MVP-01</strong>：Repo 名规划 <code>nova-client-phase0</code>；README 须链回白皮书 commit SHA。</p>
+<p><strong>MVP-02</strong>：P0-04 流水线验收指标：上传→CS 评分→L1 渲染 &lt;5 分钟（客户端可观测）。</p>
+
 <!-- ===== 附录 ===== -->
 <h2 id="sec-appendix">附录 · 核心术语表</h2>
 <div class="table-wrap">
@@ -2126,12 +2751,13 @@ AI自动初审（60-70%，秒级-分钟级）
             <tr><td><strong>Novan</strong></td><td>Novan</td><td>数字居民称谓（诺文人）</td></tr>
             <tr><td><strong>Novaverse</strong></td><td>Novaverse</td><td>诺瓦宇宙——多元宇宙名称</td></tr>
             <tr><td><strong>NVC</strong></td><td>NOVA Coin</td><td>生态价值储值通证，1000亿枚恒定</td></tr>
-            <tr><td><strong>NPT</strong></td><td>NOVA Points</td><td>内部稳定积分，购买力永久固定</td></tr>
+            <tr><td><strong>NPT</strong></td><td>NOVA Points</td><td>内部劳动与流通积分；平台标准价目锚定，消费销毁，可增发可销毁</td></tr>
+            <tr><td><strong>NCC</strong></td><td>Nova Civilization Charter</td><td>NOVA 文明宪章，最高法理文本（见 〇.七）</td></tr>
             <tr><td><strong>现实锚定世界</strong></td><td>Reality-Anchored World</td><td>以现实地球为基底的混合世界</td></tr>
             <tr><td><strong>七层空间架构</strong></td><td>Seven-Layer Architecture</td><td>L0-L6共7层</td></tr>
             <tr><td><strong>CS黄金级</strong></td><td>CS Gold</td><td>复刻区域置信度≥70%</td></tr>
             <tr><td><strong>DES黄金级</strong></td><td>DES Gold</td><td>数字永生最高等级</td></tr>
-            <tr><td><strong>ASP</strong></td><td>Avatar Sovereignty Protocol</td><td>数字人主权协议</td></tr>
+            <tr><td><strong>ASP</strong></td><td>Avatar Sovereignty Protocol</td><td>数字人主权开放协议（见 19、19.7）</td></tr>
             <tr><td><strong>GPF</strong></td><td>Governance Priority Framework</td><td>治理优先级金字塔</td></tr>
             <tr><td><strong>SAL</strong></td><td>Space Arbitration Layer</td><td>L6空间仲裁层</td></tr>
             <tr><td><strong>AEM</strong></td><td>Avatar Ethical Minimum</td><td>数字人道德底线约束</td></tr>
@@ -2141,6 +2767,148 @@ AI自动初审（60-70%，秒级-分钟级）
             <tr><td><strong>CIP</strong></td><td>Civilization Inheritance Protocol</td><td>文明继承协议</td></tr>
             <tr><td><strong>COTMS</strong></td><td>Consciousness Origin Traceability</td><td>意识来源追溯体系</td></tr>
             <tr><td><strong>MVC</strong></td><td>Minimum Viable Civilization</td><td>最小可行文明</td></tr>
+            <tr><td><strong>ROY</strong></td><td>Region Royalty</td><td>区域版税与首拓者规则（见 7.6）</td></tr>
+            <tr><td><strong>RFC-Finance-01</strong></td><td>—</td><td>平台收入分配优先级栈（见 29.5）</td></tr>
+            <tr><td><strong>VIO</strong></td><td>Violation Index</td><td>违规累计记分制（见 11.6）</td></tr>
+            <tr><td><strong>CS-CHAIN</strong></td><td>CS Contribution Chain</td><td>CS 链上贡献证明（见 7.7）</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ===== 方案评估附录 ===== -->
+<h2 id="sec-review">附录 · 方案评估与已知边界（Review Memo）</h2>
+<p>本附录为深度评估摘要（持续更新至 <strong>V1.7.1</strong>），供投资人、开发者与治理研究者快速把握方案<strong>优势、风险与剩余张力</strong>。</p>
+
+<h3>一、核心优势（保留）</h3>
+<ul>
+    <li><strong>体系完整</strong>：52 模块 + docs/ 工程配套，覆盖宪法到 OpenAPI</li>
+    <li><strong>边界诚实</strong>：第三章与 DES 明确不承诺意识迁移，信用资产突出</li>
+    <li><strong>工程务实</strong>：Phase 0「1 城 10 地标」与 38.8 解锁路线图可执行</li>
+    <li><strong>伦理前瞻</strong>：RMP、COTMS、36.5 人格保护、29.7 消亡矩阵形成Responsible AI 框架</li>
+</ul>
+
+<h3>二、仍须正视的风险与漏洞</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>类别</th><th>风险</th><th>当前缓解措施</th><th>残余风险</th></tr></thead>
+        <tbody>
+            <tr><td><strong>算力</strong></td><td>复刻渲染 + 黄金 DES 推理双黑洞</td><td>RPC、Phase 0 临时栈、剪刀差预警</td><td>Phase 3 前收入难覆盖算力</td></tr>
+            <tr><td><strong>冷启动</strong></td><td>众包地球 vs 私密区/L5 冲突</td><td>PRIV 规则、B 端地标先行</td><td>私人空间数据缺口长期存在</td></tr>
+            <tr><td><strong>经济</strong></td><td>NPT/NVC/子货币/版税叠加复杂</td><td>RFC-Finance-01、Phase 3 前仅 NPT</td><td>监管认定与 macro 仿真仍不足</td></tr>
+            <tr><td><strong>治理</strong></td><td>全球投票在低 DAU 不可行</td><td>32.5 创始期过渡、21.6 投票权重 cap</td><td>早期中心化与「文明」叙事张力</td></tr>
+            <tr><td><strong>Game</strong></td><td>CS 刷分、版税抢地</td><td>7.6 ROY + 7.7 CS-CHAIN + 11.6 VIO</td><td>Phase 1 全链上收据</td></tr>
+            <tr><td><strong>预期</strong></td><td>「数字永生」用户误解</td><td>DES 红线声明、COTMS 标记</td><td>营销话术须与 DES 严格一致</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>三、逻辑自洽性评估</h3>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>维度</th><th>V1.0</th><th>V1.1</th><th>V1.2</th><th>V1.3</th><th>V1.4</th><th>V1.5</th><th>V1.6</th><th>V1.7</th></tr></thead>
+        <tbody>
+            <tr><td>宪章与引用</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅ +EN</td><td>✅ +EN HTML</td></tr>
+            <tr><td>硬矛盾修复</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Phase 命名一致</td><td>❌</td><td>⚠️</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+            <tr><td>财务预测可信度</td><td>❌</td><td>⚠️</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅ +MC</td><td>✅</td></tr>
+            <tr><td>合规可执行</td><td>❌</td><td>⚠️</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+            <tr><td>工程规范</td><td>❌</td><td>⚠️</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅ 基金会</td><td>✅ RFC+CI</td></tr>
+            <tr><td>Game 漏洞防护</td><td>❌</td><td>⚠️</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Phase 0 可验收</td><td>❌</td><td>⚠️</td><td>⚠️</td><td>⚠️</td><td>✅</td><td>✅</td><td>✅ +城选</td><td>✅ +RFP+MVP</td></tr>
+            <tr><td>Alpha/Beta 包</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>⚠️</td><td>✅</td><td>✅ Beta</td><td>✅ GA 冻结</td></tr>
+            <tr><td>国际化</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>✅ 摘要</td><td>✅ HTML+CI</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>四、后续演进建议（V1.8+ 方向，非承诺）</h3>
+<ul>
+    <li>nova-client-phase0 公开 repo 首版 tag</li>
+    <li>标杆城实地扫描中标与 MOU 签署公示</li>
+    <li>ASP 基金会 GitHub org 法人实体注册</li>
+    <li>Phase 0 Sprint 0 燃尽图与公开 roadmap</li>
+</ul>
+<p><strong>V1.7.1 已落地</strong>：完整英文版 HTML（87 章节）· build_en_whitepaper.py · 全量 sync_check。</p>
+<p><strong>V1.7 已落地</strong>：〇.九 EN HTML+CI · 19.10 ASP RFC · 40.9 扫描招标 · 40.10 客户端 MVP · docs/ 扩展至 25+ 文件 · GA 文档冻结。</p>
+<p><strong>V1.6 已落地</strong>：19.9 ASP 基金会 · 21.9 Monte Carlo · 40.8 城选投票 · 〇.八 英文摘要。</p>
+<p><strong>V1.5 已落地</strong>：19.8 ASP 一致性测试 · 22.7 Zone C API · 29.8 文化遗产 MOU · 40.7 Demo 规范 · 九.六 数据 SLA · docs/ 十套工程文件 · 可运行宏观仿真。</p>
+<p><strong>V1.4 已落地</strong>：7.7 CS-CHAIN · 22.6 Zone 追踪表 · 21.8 仿真结构 · 40.6 + 附录 Phase 0 清单 · docs/ 四套工程文件。</p>
+<p><strong>V1.3 已落地</strong>：九.五 · 11.6 VIO · 19.7 ASP · 21.7 · 22.5 · JSON Schema。</p>
+
+<!-- ===== ASP Schema 附录 ===== -->
+<h2 id="sec-asp-spec">附录 · ASP 数据包 JSON Schema 纲要</h2>
+<p>以下为 CIP 迁移包 <code>manifest.json</code> 之最小 JSON Schema（ASP v0.1 草案，完整 spec 将独立发布）：</p>
+<div class="code-flow">{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASPExportManifest",
+  "type": "object",
+  "required": ["asp_version", "uid", "des_level", "exported_at", "source_platform"],
+  "properties": {
+    "asp_version": { "type": "string", "const": "0.1.0" },
+    "uid": { "type": "string", "pattern": "^H[0-9a-f]{127}$" },
+    "des_level": { "enum": ["bronze", "silver", "gold", "consciousness_stream"] },
+    "exported_at": { "type": "string", "format": "date-time" },
+    "source_platform": { "type": "string" },
+    "cotms_summary": {
+      "type": "object",
+      "properties": {
+        "phy_real_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "ai_synthetic_pct": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "personality_core_hash": { "type": "string" },
+    "signature": { "type": "string", "description": "用户 ECDSA 签名" }
+  }
+}</div>
+<p><strong>兼容性规则</strong>：导入方须支持 <code>asp_version</code> 向下兼容 1 个小版本；不兼容时拒绝导入并提示升级。</p>
+
+<!-- ===== 工程配套文件索引 ===== -->
+<h2 id="sec-docs">附录 · 工程配套文件索引（docs/）</h2>
+<p>以下文件与白皮书 V1.7.1 同步维护，构成 <strong>GA 文档冻结包</strong>：</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>路径</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td><code>docs/README.md</code></td><td>工程文件总索引</td></tr>
+            <tr><td><code>docs/index.html</code></td><td>工程 docs 浏览器入口（HTML 可点击索引）</td></tr>
+            <tr><td><code>docs/en/whitepaper.html</code></td><td>完整英文版 HTML（87 章节 ID 同步）</td></tr>
+            <tr><td><code>docs/ci/build_en_whitepaper.py</code></td><td>中文→英文完整版生成脚本</td></tr>
+            <tr><td><code>docs/ci/chapter-manifest.yaml</code></td><td>中英章节对照 · sync_check 输入</td></tr>
+            <tr><td><code>docs/ci/sync_check.py</code></td><td>PR 章节同步校验脚本</td></tr>
+            <tr><td><code>docs/ci/check_links.py</code></td><td>全站 HTML/Markdown 链接校验</td></tr>
+            <tr><td><code>docs/asp-foundation/</code></td><td>章程 · 认证 · RFC 流程 · 模板</td></tr>
+            <tr><td><code>docs/phase0-procurement/</code></td><td>扫描 RFP · 文化遗产 MOU 清单</td></tr>
+            <tr><td><code>docs/phase0-client-mvp/</code></td><td>开源客户端 MVP 架构与 repo 规范</td></tr>
+            <tr><td><code>docs/phase0-city-selection.md</code></td><td>标杆城投票流程</td></tr>
+            <tr><td><code>docs/phase0-checklist.md</code></td><td>Phase 0 验收勾选表</td></tr>
+            <tr><td><code>docs/asp-openapi.yaml</code></td><td>ASP v0.1 OpenAPI</td></tr>
+            <tr><td><code>docs/asp-conformance-tests.yaml</code></td><td>31 项一致性测试</td></tr>
+            <tr><td><code>docs/macro-simulation/</code></td><td>nova_macro · monte_carlo</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ===== Phase 0 验收清单 ===== -->
+<h2 id="sec-phase0">附录 · Phase 0 工程验收清单</h2>
+<p>Phase 0 结束（6–12 月）须<strong>全部 P0 项通过</strong>方可进入 Phase 1。勾选者：技术委员会 + 产品负责人双签。</p>
+<div class="table-wrap">
+    <table>
+        <thead><tr><th>□</th><th>编号</th><th>验收项</th><th>证据材料</th></tr></thead>
+        <tbody>
+            <tr><td>□</td><td>P0-01</td><td>选定 1 城（经 40.8 投票 + 坐标公示）</td><td>治理日志 + city-selection 记录</td></tr>
+            <tr><td>□</td><td>P0-02</td><td>10 地标 CS≥70% 可 VR 进入</td><td>DTA UID 列表</td></tr>
+            <tr><td>□</td><td>P0-03</td><td>L0 OSM+DEM 无空洞</td><td>截图 + 自动化测试报告</td></tr>
+            <tr><td>□</td><td>P0-04</td><td>众包上传 CS 流水线稳定 7 天</td><td>监控 dashboard</td></tr>
+            <tr><td>□</td><td>P0-05</td><td>NPT 贡献/消费账目可审计</td><td>链下账本 + 抽样</td></tr>
+            <tr><td>□</td><td>P0-06</td><td>Zone B 无 NVC/AMM 入口</td><td>UI 审计截图</td></tr>
+            <tr><td>□</td><td>P0-07</td><td>算力 γ &lt;50% 连续 30 天</td><td>40.4 指标报表</td></tr>
+            <tr><td>□</td><td>P0-08</td><td>文明宪章注册学习完成率 ≥80%</td><td>用户行为统计</td></tr>
+            <tr><td>□</td><td>P1-01</td><td>ASP export manifest 通过 Schema + 一致性测试</td><td>CI 测试日志</td></tr>
+            <tr><td>□</td><td>P1-02</td><td>CS-CHAIN 每日 Merkle root 上链</td><td>区块浏览器链接</td></tr>
+            <tr><td>□</td><td>P1-03</td><td>Demo 环境上线且治理日志公示</td><td>demo URL · phase0-demo-spec</td></tr>
+            <tr><td>□</td><td>P1-04</td><td>宏观仿真 baseline 跑通</td><td>nova_macro.py 输出</td></tr>
+            <tr><td>□</td><td>P1-05</td><td>Monte Carlo 基准跑通（10k sims）</td><td>monte_carlo.py 报告</td></tr>
+            <tr><td>□</td><td>P1-06</td><td>EN HTML sync_check 全绿</td><td>docs/ci/sync_check.py</td></tr>
         </tbody>
     </table>
 </div>
@@ -2151,7 +2919,15 @@ AI自动初审（60-70%，秒级-分钟级）
     <table>
         <thead><tr><th>版本</th><th>日期</th><th>变更</th></tr></thead>
         <tbody>
-            <tr><td><strong>v1.0.0</strong></td><td><strong>2026-08-14</strong></td><td><strong>NOVA 品牌首版正式发布：品牌名NOVA（新星），代币NVC，积分NPT，居民Novan，宇宙Novaverse。完整白皮书42大模块。此后进入维护与演进模式。</strong></td></tr>
+            <tr><td><strong>v1.7.1</strong></td><td><strong>2026-08-17</strong></td><td><strong>完整英文版：docs/en/whitepaper.html 全 64 模块全文翻译（非摘要镜像）、build_en_whitepaper.py、87 章节 ID 全量 sync_check。</strong></td></tr>
+            <tr><td><strong>v1.7.0</strong></td><td><strong>2026-08-17</strong></td><td><strong>工程启动版：〇.九 EN HTML+CI、19.10 ASP RFC、40.9 扫描招标、40.10 客户端 MVP、GA 文档冻结。</strong></td></tr>
+            <tr><td><strong>v1.6.0</strong></td><td><strong>2026-08-17</strong></td><td><strong>治理与仿真完备版：19.9 ASP 基金会、21.9 Monte Carlo、40.8 城选投票、〇.八 英文摘要。</strong></td></tr>
+            <tr><td><strong>v1.5.0</strong></td><td><strong>2026-08-17</strong></td><td><strong>交付完备版：19.8 ASP 一致性测试、22.7 Zone C Dashboard API、29.8 文化遗产 MOU、40.7 Demo 规范、九.六 数据 SLA、宏观仿真可运行脚本、docs/ 扩展至十套文件。</strong></td></tr>
+            <tr><td><strong>v1.4.0</strong></td><td><strong>2026-08-17</strong></td><td><strong>工程规范版：7.7 CS-CHAIN、22.6 Zone 追踪表、21.8 仿真结构、40.6 Phase 0 验收、docs/ 配套文件（OpenAPI/Schema/Checklist）。章节顺序修正（7.5→7.6→7.7）。</strong></td></tr>
+            <tr><td><strong>v1.3.0</strong></td><td><strong>2026-08-17</strong></td><td><strong>规范补全版：九.五 外部数据源、11.6 VIO、19.7 ASP API、21.7 宏观参数、22.5 NVC Playbook、ASP JSON Schema。</strong></td></tr>
+            <tr><td><strong>v1.2.0</strong></td><td><strong>2026-08-17</strong></td><td><strong>深度修订版：Phase 对照表、RPC Phase 0 栈、7.6 版税防抢地、30.6 财务敏感性、32.5 创始期治理、3.5 合规边界、附录 Review Memo。</strong></td></tr>
+            <tr><td><strong>v1.1.0</strong></td><td><strong>2026-08-17</strong></td><td><strong>一致性修订版：新增《文明宪章》全文（〇.七）；修复 MirrorX/预备期/审核周期/NPT 定义等逻辑矛盾；新增私密区规则、DES 消亡矩阵、收入分配栈、文明解锁路线图、人格保护程序。</strong></td></tr>
+            <tr><td><strong>v1.0.0</strong></td><td><strong>2026-08-14</strong></td><td><strong>NOVA 品牌首版正式发布：品牌名 NOVA（新星），代币 NVC，积分 NPT，居民 Novan，宇宙 Novaverse。完整白皮书 42 大模块。此后进入维护与演进模式。</strong></td></tr>
         </tbody>
     </table>
 </div>
@@ -2164,10 +2940,10 @@ AI自动初审（60-70%，秒级-分钟级）
     <p><em>从2026年8月的第一个构想，到V1.0.0的新星品牌首版——NOVA的诞生，不是一个版本号的递增，而是一个全新数字文明从无到有的完整宣言。</em></p>
     <p><strong><em>NOVA —— 新星文明，由此诞生。</em></strong></p>
     <p><strong><em>现实为锚，新星为光。</em></strong></p>
-    <p><em>从现实锚定世界的基石，到平行宇宙的无限时空；从数字人的第一次喂养，到意识流完全体的永恒存在；从NVC的百年发行曲线，到NPT的柔性通缩机制；从三层治理架构的分权制衡，到元治理终极保障的层层守护；从数字司法体系的三层递进，到本体失能的诉讼守护；从开放平台的生态和谐，到代际传承的永恒机制——每一个环节都有法理依据，每一个极限都有坦诚说明，每一个终结都有优雅方案，每一个冲突都有仲裁机制，每一个承诺都有监督守护，每一个悖论都有终极解法，每一个未知都有应急预案。</em></p>
+    <p><em>从现实锚定世界的基石，到平行宇宙的可扩展时空；从数字人的第一次喂养，到意识流完全体的探索性存在；从 NVC 的百年发行曲线，到 NPT 的价目锚定与柔性销毁机制；从三层治理架构的分权制衡，到元治理终极保障的层层守护——<strong>每一个已知风险都有预案，每一个已知冲突都有仲裁机制；未知风险保留宪章修订与快速响应程序。</strong></em></p>
     <p><strong><em>说一句话，创造一个世界。想一个念头，生成一个宇宙。</em></strong></p>
     <p><em>白皮书的迭代，到此真正完成。工程化的建设，即刻开始。文明的永续，自此立下。”</em></p>
-    <p style="margin-top:12px; text-align:right; font-weight:600;">—— NOVA 创世核心理念 V1.0.0 · 新星品牌首版</p>
+    <p style="margin-top:12px; text-align:right; font-weight:600;">—— NOVA 创世核心理念 V1.7.1 · 完整英文版</p>
 </div>
 
 <div style="text-align:center; margin-top:12px; color:#5a5a7a; font-size:15px;">
@@ -2177,12 +2953,12 @@ AI自动初审（60-70%，秒级-分钟级）
 <!-- ===== 底部版权 ===== -->
 <div class="footer-note">
     <p><strong>© 2026 rainzheng. All Rights Reserved.</strong></p>
-    <p>《NOVA · 数字世界构思白皮书》V1.0.0 — 新星品牌首版</p>
+    <p>《NOVA · 数字世界构思白皮书》V1.1.0 — 一致性修订版</p>
     <p style="margin-top:4px;">作者：<strong>rainzheng</strong> &nbsp;|&nbsp; 联系方式：<strong>irainzheng@163.com</strong></p>
     <p style="font-size:12px; color:#6a6a8a; margin-top:4px;">本作品采用 CC BY-NC-ND 4.0 许可协议 · 转载须保留完整版权声明</p>
     <p style="font-size:12px; color:#6a6a8a;">免责声明：本作品仅为作者个人构思与观点表达，不构成任何形式的投资建议、法律意见或技术承诺。</p>
-    <p style="margin-top:12px; font-size:13px; color:#6a6a8a;">文档状态：✅ 四十二模块完整闭环 &nbsp;|&nbsp; 核心完整性评估：100%</p>
-    <p style="font-size:13px; color:#6a6a8a;">版本定性：NOVA 品牌首版正式发布，可进入工程化开发与Alpha原型构建阶段</p>
+    <p style="margin-top:12px; font-size:13px; color:#6a6a8a;">文档状态：✅ 六十四模块 · 完整英文版 · GA 冻结 &nbsp;|&nbsp; 版本：V1.7.1</p>
+    <p style="font-size:13px; color:#6a6a8a;">版本定性：工程规范版 — 以 Phase 0 验收清单 + docs/ 为 Alpha 开工基准</p>
 </div>
 
 <!-- ===== JavaScript 复制功能 ===== -->

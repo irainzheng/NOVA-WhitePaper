@@ -1,0 +1,244 @@
+openapi: 3.1.0
+info:
+  title: NOVA Zone C Public Dashboard API
+  version: 1.0.0
+  description: |
+    Read-only public API for jurisdiction Zone status (A/B/C/D).
+    Whitepaper V1.6.0 · Section 22.7 / 21.9 (macro_stress_hash)
+  contact:
+    name: NOVA Governance
+    email: irainzheng@163.com
+  license:
+    name: CC BY-NC-ND 4.0
+
+servers:
+  - url: https://governance.nova.example/public/v1
+    description: Production (Phase 3+)
+
+paths:
+  /zones:
+    get:
+      operationId: listZones
+      summary: List all jurisdictions and their current Zone
+      tags: [zones]
+      parameters:
+        - name: zone
+          in: query
+          schema:
+            type: string
+            enum: [A, B, C, D]
+          description: Filter by zone type
+      responses:
+        "200":
+          description: Zone list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ZoneListResponse"
+
+  /zones/{jurisdiction}:
+    get:
+      operationId: getZone
+      summary: Single jurisdiction detail
+      tags: [zones]
+      parameters:
+        - $ref: "#/components/parameters/Jurisdiction"
+      responses:
+        "200":
+          description: Zone detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ZoneDetail"
+        "404":
+          description: Unknown jurisdiction code
+
+  /zones/changelog:
+    get:
+      operationId: zoneChangelog
+      summary: Zone change history (paginated)
+      tags: [zones]
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: page_size
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: since
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        "200":
+          description: Changelog page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChangelogResponse"
+
+  /nvc-gateways:
+    get:
+      operationId: listNvcGateways
+      summary: Fiat gateway status for Zone C jurisdictions
+      tags: [nvc]
+      responses:
+        "200":
+          description: Gateway list (no PII/KYC)
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GatewayListResponse"
+
+components:
+  parameters:
+    Jurisdiction:
+      name: jurisdiction
+      in: path
+      required: true
+      schema:
+        type: string
+        example: SG
+      description: ISO 3166-1 alpha-2 or custom code (e.g. EU-MiCA)
+
+  schemas:
+    ZoneListResponse:
+      type: object
+      required: [last_updated, data_hash, zones]
+      properties:
+        last_updated:
+          type: string
+          format: date-time
+        data_hash:
+          type: string
+          description: SHA-256 of canonical zone JSON
+        zones:
+          type: array
+          items:
+            $ref: "#/components/schemas/ZoneSummary"
+
+    ZoneSummary:
+      type: object
+      required: [jurisdiction, zone, compliance_status]
+      properties:
+        jurisdiction:
+          type: string
+        jurisdiction_name:
+          type: string
+        zone:
+          type: string
+          enum: [A, B, C, D]
+        compliance_status:
+          type: string
+          enum: [active, evaluating, suspended, not_applicable]
+        nvc_fiat_gateway:
+          type: string
+          enum: [available, pending, unavailable, not_applicable]
+        estimated_zone_c:
+          type: string
+          nullable: true
+          description: Human-readable estimate, not a commitment
+
+    ZoneDetail:
+      allOf:
+        - $ref: "#/components/schemas/ZoneSummary"
+        - type: object
+          properties:
+            legal_memo_hash:
+              type: string
+              description: IPFS or SHA-256 of legal memo summary
+            mgoc_review_date:
+              type: string
+              format: date
+            public_notice_days:
+              type: integer
+              description: CP-01 30-day notice compliance
+            amm_enabled:
+              type: boolean
+              description: true only for Zone C per CP-03
+
+    ChangelogEntry:
+      type: object
+      required: [jurisdiction, from_zone, to_zone, effective_at, reason_code]
+      properties:
+        jurisdiction:
+          type: string
+        from_zone:
+          type: string
+          enum: [A, B, C, D]
+        to_zone:
+          type: string
+          enum: [A, B, C, D]
+        effective_at:
+          type: string
+          format: date-time
+        reason_code:
+          type: string
+          enum: [regulatory_approval, regulatory_restriction, user_geo_policy, mgoc_decision]
+        governance_log_ref:
+          type: string
+          format: uri
+
+    ChangelogResponse:
+      type: object
+      required: [last_updated, data_hash, entries, page, total]
+      properties:
+        last_updated:
+          type: string
+          format: date-time
+        data_hash:
+          type: string
+        page:
+          type: integer
+        page_size:
+          type: integer
+        total:
+          type: integer
+        entries:
+          type: array
+          items:
+            $ref: "#/components/schemas/ChangelogEntry"
+
+    GatewaySummary:
+      type: object
+      required: [jurisdiction, partner_name, status]
+      properties:
+        jurisdiction:
+          type: string
+        partner_name:
+          type: string
+        status:
+          type: string
+          enum: [live, pilot, onboarding, unavailable]
+        supported_fiat:
+          type: array
+          items:
+            type: string
+        daily_limit_usd:
+          type: number
+          nullable: true
+
+    GatewayListResponse:
+      type: object
+      required: [last_updated, data_hash, gateways]
+      properties:
+        last_updated:
+          type: string
+          format: date-time
+        data_hash:
+          type: string
+        macro_stress_hash:
+          type: string
+          description: Optional SHA-256 of latest monte_carlo_v1.6.json (whitepaper 21.9)
+        gateways:
+          type: array
+          items:
+            $ref: "#/components/schemas/GatewaySummary"

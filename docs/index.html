@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA Engineering Docs</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a2e; }
+    h1 { border-bottom: 2px solid #e0e4ec; padding-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { border: 1px solid #d8dce6; padding: 10px 12px; text-align: left; }
+    th { background: #f4f6fa; }
+    a { color: #2a4b8d; }
+    code { background: #f0f2f8; padding: 2px 6px; border-radius: 4px; }
+    .nav { margin-bottom: 24px; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <p class="nav">
+    <a href="../index.html">← Language hub</a>
+    &nbsp;|&nbsp;
+    <a href="../NOVA%20%C2%B7%20%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E6%9E%84%E6%80%9D%E7%99%BD%E7%9A%AE%E4%B9%A6.html">中文白皮书</a>
+    &nbsp;|&nbsp;
+    <a href="en/whitepaper.html">English Full Edition</a>
+  </p>
+
+  <h1>NOVA 工程配套文件（GA 文档冻结包）</h1>
+  <p>白皮书 <strong>V1.7.1</strong> · 完整英文版</p>
+
+  <h2>文件索引</h2>
+  <table>
+    <thead>
+      <tr><th>文件</th><th>章节</th><th>用途</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="en/whitepaper.html">en/whitepaper.html</a></td><td>〇.八–〇.九</td><td><strong>完整英文版</strong>（87 章节 ID 同步）</td></tr>
+      <tr><td><a href="ci/build_en_whitepaper.py">ci/build_en_whitepaper.py</a></td><td>〇.九</td><td>中文→英文完整版生成</td></tr>
+      <tr><td><a href="ci/chapter-manifest.yaml">ci/chapter-manifest.yaml</a></td><td>〇.九</td><td>章节 ID 对照</td></tr>
+      <tr><td><a href="ci/sync_check.py">ci/sync_check.py</a></td><td>〇.九</td><td>PR 同步校验</td></tr>
+      <tr><td><a href="ci/check_links.py">ci/check_links.py</a></td><td>〇.九</td><td>全站链接校验</td></tr>
+      <tr><td><a href="asp-foundation/">asp-foundation/</a></td><td>19.9–19.10</td><td>基金会 · RFC</td></tr>
+      <tr><td><a href="phase0-procurement/">phase0-procurement/</a></td><td>40.9</td><td>扫描 RFP · MOU 清单</td></tr>
+      <tr><td><a href="phase0-client-mvp/">phase0-client-mvp/</a></td><td>40.10</td><td>开源客户端 MVP</td></tr>
+      <tr><td><a href="phase0-city-selection.md">phase0-city-selection.md</a></td><td>40.8</td><td>城选投票</td></tr>
+      <tr><td><a href="phase0-checklist.md">phase0-checklist.md</a></td><td>40.6</td><td>Phase 0 验收</td></tr>
+      <tr><td><a href="macro-simulation/">macro-simulation/</a></td><td>21.7–21.9</td><td>仿真 + Monte Carlo</td></tr>
+    </tbody>
+  </table>
+
+  <h2>CI 校验</h2>
+  <pre><code>pip install pyyaml beautifulsoup4 deep-translator
+python docs/ci/build_en_whitepaper.py
+python docs/ci/sync_check.py
+python docs/ci/check_links.py</code></pre>
+
+  <p>© 2026 rainzheng</p>
+</body>
+</html>

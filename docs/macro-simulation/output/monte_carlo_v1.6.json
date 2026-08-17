@@ -1,0 +1,39 @@
+{
+  "simulations": 1000,
+  "years": 20,
+  "p_gamma_streak_ge_12m": 0.76,
+  "p_cumulative_deficit": 0.0,
+  "alert_level": "red",
+  "sample_draws": [
+    {
+      "max_gamma_streak_months": 0,
+      "cumulative_deficit": false,
+      "final_pi": 0.03377420593060477,
+      "final_arpu": 579.2144740949791
+    },
+    {
+      "max_gamma_streak_months": 0,
+      "cumulative_deficit": false,
+      "final_pi": 0.045148080546718046,
+      "final_arpu": 512.551827570326
+    },
+    {
+      "max_gamma_streak_months": 0,
+      "cumulative_deficit": false,
+      "final_pi": 0.014838708866162151,
+      "final_arpu": 476.82071391619786
+    },
+    {
+      "max_gamma_streak_months": 240,
+      "cumulative_deficit": false,
+      "final_pi": 0.014919827991831353,
+      "final_arpu": 499.21976269544916
+    },
+    {
+      "max_gamma_streak_months": 240,
+      "cumulative_deficit": false,
+      "final_pi": 0.020311273243309638,
+      "final_arpu": 640.4896703968453
+    }
+  ]
+}

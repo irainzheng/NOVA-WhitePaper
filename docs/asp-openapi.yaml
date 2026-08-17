@@ -1,0 +1,166 @@
+openapi: 3.1.0
+info:
+  title: Avatar Sovereignty Protocol (ASP)
+  version: 0.1.0
+  description: |
+    NOVA Reference Implementation — ASP v0.1 draft.
+    See whitepaper sections 19, 19.7 and appendix JSON Schema.
+  contact:
+    email: irainzheng@163.com
+
+servers:
+  - url: https://api.nova.example/asp/v1
+    description: Production (Phase 1+)
+  - url: https://sandbox.nova.example/asp/v1
+    description: Zone A sandbox
+
+paths:
+  /avatar/{uid}:
+    get:
+      operationId: getAvatarSummary
+      summary: Read public avatar profile summary
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: '^H[0-9a-f]{127}$'
+      responses:
+        '200':
+          description: Avatar summary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AvatarSummary'
+        '404':
+          description: Avatar not found
+
+  /avatar/{uid}/export:
+    post:
+      operationId: exportAvatarBundle
+      summary: Export CIP migration bundle
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - oauth2: [avatar:export]
+      responses:
+        '200':
+          description: Export job created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExportJob'
+
+  /avatar/{uid}/invoke:
+    post:
+      operationId: invokeAvatar
+      summary: Third-party invoke (L1-L4)
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [auth_level, prompt]
+              properties:
+                auth_level:
+                  type: integer
+                  enum: [1, 2, 3, 4]
+                prompt:
+                  type: string
+      responses:
+        '200':
+          description: Invoke response
+
+  /avatar/{uid}/memory:
+    patch:
+      operationId: appendMemory
+      summary: Append feeding data with COTMS labels
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Memory appended
+
+  /avatar/{uid}/des:
+    get:
+      operationId: getDesLevel
+      summary: Query DES level and upgrade progress
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: DES status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DesStatus'
+
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://auth.nova.example/oauth/authorize
+          tokenUrl: https://auth.nova.example/oauth/token
+          scopes:
+            avatar:read: Read avatar summary
+            avatar:export: Export migration bundle
+            avatar:invoke:L1: Invoke L1 dialogue only
+
+  schemas:
+    AvatarSummary:
+      type: object
+      required: [uid, des_level, display_name]
+      properties:
+        uid:
+          type: string
+        des_level:
+          type: string
+          enum: [bronze, silver, gold, consciousness_stream]
+        display_name:
+          type: string
+
+    ExportJob:
+      type: object
+      properties:
+        job_id:
+          type: string
+        status:
+          type: string
+          enum: [pending, ready, failed]
+        download_url:
+          type: string
+          format: uri
+
+    DesStatus:
+      type: object
+      properties:
+        des_level:
+          type: string
+        feeding_days:
+          type: integer
+        personality_stability:
+          type: number
+          minimum: 0
+          maximum: 100

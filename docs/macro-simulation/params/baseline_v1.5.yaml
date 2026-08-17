@@ -1,0 +1,39 @@
+# NOVA macro simulation baseline — whitepaper 21.7
+version: "1.5"
+
+npt:
+  daily_earn_cap_per_user: 50
+  consume_destroy_rate_median: 0.50
+  monthly_nvc_convert_cap: 5000
+
+agents:
+  contributor_ratio:
+    phase0: 0.05
+    phase1: 0.08
+    phase2: 0.12
+    phase3: 0.15
+  dau_growth:
+    phase0_end: 5000
+    phase1_end: 50000
+    phase2_end: 500000
+
+compute:
+  gamma_red_line: 0.40
+  gamma_phase0_target: 0.50
+
+immortality_subscription:
+  penetration_neutral: 0.01
+  penetration_optimistic: 0.05
+  arpu_usd_neutral: 500
+
+# V1.5 additions — sensitivity toggles for nova_macro.py
+scenarios:
+  neutral:
+    penetration: 0.01
+    arpu_usd: 500
+  optimistic:
+    penetration: 0.05
+    arpu_usd: 500
+  pessimistic:
+    penetration: 0.005
+    arpu_usd: 300

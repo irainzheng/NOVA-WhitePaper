@@ -1,0 +1,246 @@
+# ASP Conformance Test Suite v0.1
+# Whitepaper V1.5.0 · Section 19.8
+# Run against ASP Reference Implementation or third-party server
+
+meta:
+  asp_version: "0.1"
+  total_tests: 31
+  suites: [ASP-CORE, ASP-EXPORT, ASP-INVOKE, ASP-SECURITY]
+
+suites:
+  ASP-CORE:
+    description: Manifest, UID, COTMS field compliance
+    tests:
+      - id: CORE-01
+        name: manifest_required_fields
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          status: 200
+          body.manifest:
+            required: [asp_version, export_time, source_platform, uid_root]
+      - id: CORE-02
+        name: uid_root_immutable
+        method: GET
+        path: /asp/v1/avatar/{uid}
+        expect:
+          body.uid_root: "{uid}"
+      - id: CORE-03
+        name: cotms_labels_present
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          body.cotms_labels:
+            required: [O-0, O-1, O-2, O-3, O-4]
+      - id: CORE-04
+        name: des_level_valid_enum
+        method: GET
+        path: /asp/v1/avatar/{uid}/des
+        expect:
+          body.level: ["bronze", "silver", "gold", "consciousness_stream"]
+      - id: CORE-05
+        name: asp_version_header
+        method: GET
+        path: /asp/v1/avatar/{uid}
+        expect:
+          headers:
+            X-ASP-Version: "0.1"
+      - id: CORE-06
+        name: personality_core_encrypted
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          bundle_files:
+            - personality_core.bin
+          bundle.personality_core.encrypted: true
+      - id: CORE-07
+        name: memory_index_schema
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          bundle_files:
+            - memory_index.json
+          json_schema: memory_index_v0.1
+      - id: CORE-08
+        name: signatures_directory
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          bundle_dirs:
+            - signatures/
+      - id: CORE-09
+        name: export_requires_2fa
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        headers: { Authorization: "Bearer {token_no_2fa}" }
+        expect:
+          status: 403
+      - id: CORE-10
+        name: incompatible_version_rejected
+        method: GET
+        path: /asp/v1/avatar/{uid}
+        headers: { Accept-ASP-Version: "99.0" }
+        expect:
+          status: 426
+      - id: CORE-11
+        name: uid_registry_single_root
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          body.uid_registry.roots: 1
+      - id: CORE-12
+        name: export_timestamp_iso8601
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          body.manifest.export_time:
+            format: iso8601
+
+  ASP-EXPORT:
+    description: CIP bundle round-trip import/export
+    tests:
+      - id: EXP-01
+        name: export_import_roundtrip
+        steps:
+          - export: POST /asp/v1/avatar/{uid}/export
+          - import: POST /asp/v1/avatar/import
+        expect:
+          imported_uid_root: "{uid}"
+      - id: EXP-02
+        name: import_rejects_tampered_signature
+        method: POST
+        path: /asp/v1/avatar/import
+        body: tampered_bundle
+        expect:
+          status: 400
+      - id: EXP-03
+        name: import_preserves_cotms
+        steps:
+          - export_and_import
+        expect:
+          cotms_labels_unchanged: true
+      - id: EXP-04
+        name: partial_bundle_rejected
+        method: POST
+        path: /asp/v1/avatar/import
+        body: missing_manifest
+        expect:
+          status: 422
+      - id: EXP-05
+        name: cross_platform_attestation
+        method: POST
+        path: /asp/v1/avatar/import
+        expect:
+          body.attestation.source_platform: string
+      - id: EXP-06
+        name: export_size_limit
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          max_bundle_mb: 500
+      - id: EXP-07
+        name: export_audit_log
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        expect:
+          audit_event: asp.export.completed
+      - id: EXP-08
+        name: import_duplicate_uid_policy
+        method: POST
+        path: /asp/v1/avatar/import
+        body: existing_uid_bundle
+        expect:
+          status: 409
+          body.error: uid_conflict
+
+  ASP-INVOKE:
+    description: Third-party invoke boundaries and TPR
+    tests:
+      - id: INV-01
+        name: invoke_l1_public_profile
+        method: POST
+        path: /asp/v1/avatar/{uid}/invoke
+        body: { layer: L1, action: profile_summary }
+        expect:
+          status: 200
+      - id: INV-02
+        name: invoke_l4_requires_user_consent
+        method: POST
+        path: /asp/v1/avatar/{uid}/invoke
+        body: { layer: L4, action: creative_generate }
+        headers: { X-TPR-Rating: "A" }
+        expect_without_consent:
+          status: 403
+      - id: INV-03
+        name: invoke_rejects_low_tpr
+        method: POST
+        path: /asp/v1/avatar/{uid}/invoke
+        headers: { X-TPR-Rating: "D" }
+        expect:
+          status: 403
+      - id: INV-04
+        name: invoke_watermark_required
+        method: POST
+        path: /asp/v1/avatar/{uid}/invoke
+        body: { layer: L2, action: advice }
+        expect:
+          body.watermark: "AI生成内容，仅供参考"
+      - id: INV-05
+        name: invoke_rate_limit
+        method: POST
+        path: /asp/v1/avatar/{uid}/invoke
+        repeat: 1001
+        expect:
+          status: 429
+      - id: INV-06
+        name: memory_patch_cotms_tag
+        method: PATCH
+        path: /asp/v1/avatar/{uid}/memory
+        body: { content: "test", cotms: O-2 }
+        expect:
+          body.cotms: O-2
+
+  ASP-SECURITY:
+    description: Unauthorized access must fail closed
+    tests:
+      - id: SEC-01
+        name: des_unauthorized_403
+        method: GET
+        path: /asp/v1/avatar/{uid}/des
+        headers: { Authorization: "Bearer {other_user_token}" }
+        expect:
+          status: 403
+      - id: SEC-02
+        name: memory_unauthorized_403
+        method: PATCH
+        path: /asp/v1/avatar/{uid}/memory
+        headers: { Authorization: "Bearer {other_user_token}" }
+        expect:
+          status: 403
+      - id: SEC-03
+        name: export_other_user_403
+        method: POST
+        path: /asp/v1/avatar/{uid}/export
+        headers: { Authorization: "Bearer {other_user_token}" }
+        expect:
+          status: 403
+      - id: SEC-04
+        name: no_consciousness_layer_in_invoke
+        method: POST
+        path: /asp/v1/avatar/{uid}/invoke
+        body: { layer: L5 }
+        expect:
+          status: 400
+      - id: SEC-05
+        name: oauth_scope_enforced
+        method: GET
+        path: /asp/v1/avatar/{uid}
+        headers: { Authorization: "Bearer {token_readonly}" }
+        method_override: PATCH
+        path_override: /asp/v1/avatar/{uid}/memory
+        expect:
+          status: 403
+
+certification:
+  compatible: ">= 90% pass rate"
+  certified: "100% pass rate + ASP-SECURITY green"

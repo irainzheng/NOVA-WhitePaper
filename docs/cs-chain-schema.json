@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CSChainContributionReceipt",
+  "description": "CS-CHAIN contribution receipt — whitepaper section 7.7",
+  "type": "object",
+  "required": [
+    "contrib_id",
+    "region_uid",
+    "contributor_uid",
+    "dac_level",
+    "delta_cs",
+    "media_hash",
+    "timestamp",
+    "platform_sig"
+  ],
+  "properties": {
+    "contrib_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "region_uid": {
+      "type": "string",
+      "pattern": "^S[0-9a-f]{127}$"
+    },
+    "contributor_uid": {
+      "type": "string",
+      "pattern": "^H[0-9a-f]{127}$"
+    },
+    "dac_level": {
+      "type": "string",
+      "enum": ["T0", "T1", "T2", "T3"]
+    },
+    "delta_cs": {
+      "type": "object",
+      "required": ["G", "C", "P", "S", "T", "total"],
+      "properties": {
+        "G": { "type": "number", "minimum": 0, "maximum": 100 },
+        "C": { "type": "number", "minimum": 0, "maximum": 100 },
+        "P": { "type": "number", "minimum": 0, "maximum": 100 },
+        "S": { "type": "number", "minimum": 0, "maximum": 100 },
+        "T": { "type": "number", "minimum": 0, "maximum": 100 },
+        "total": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "media_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "platform_sig": {
+      "type": "string"
+    },
+    "merkle_root": {
+      "type": "string",
+      "description": "Optional daily batch root (Phase 0 transition)"
+    }
+  }
+}

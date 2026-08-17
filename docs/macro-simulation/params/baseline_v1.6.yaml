@@ -1,0 +1,54 @@
+# NOVA macro simulation baseline — whitepaper 21.7 / 21.9
+version: "1.6"
+
+npt:
+  daily_earn_cap_per_user: 50
+  consume_destroy_rate_median: 0.50
+  monthly_nvc_convert_cap: 5000
+
+agents:
+  contributor_ratio:
+    phase0: 0.05
+    phase1: 0.08
+    phase2: 0.12
+    phase3: 0.15
+  dau_growth:
+    phase0_end: 5000
+    phase1_end: 50000
+    phase2_end: 500000
+
+compute:
+  gamma_red_line: 0.40
+  gamma_phase0_target: 0.50
+
+immortality_subscription:
+  penetration_neutral: 0.01
+  penetration_optimistic: 0.05
+  arpu_usd_neutral: 500
+
+monte_carlo:
+  penetration_min: 0.005
+  penetration_max: 0.05
+  arpu_mean: 500
+  arpu_std: 100
+  compute_cost_ratio_min: 0.45
+  compute_cost_ratio_max: 0.65
+  dau_log_mu: 0.0
+  dau_log_sigma: 0.3
+  default_simulations: 10000
+  alert_thresholds:
+    yellow_gamma_streak_12m: 0.30
+    orange_gamma_streak_12m: 0.50
+    orange_cumulative_deficit: 0.25
+    red_cumulative_deficit: 0.40
+
+scenarios:
+  neutral:
+    penetration: 0.01
+    arpu_usd: 500
+  optimistic:
+    penetration: 0.05
+    arpu_usd: 500
+  pessimistic:
+    penetration: 0.005
+    arpu_usd: 300
